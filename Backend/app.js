@@ -39,11 +39,15 @@ app.use(express.urlencoded({ extended: true })); // For parsing application/x-ww
 // Routes
 
 
-app.get("/", async (req, res) => {
+app.get("/home", async (req, res) => {
     const allUsers = await users.find({});
     res.render("Crud/index.ejs", { allUsers });
 });
 
+app.get ("/home/new" , (req , res) =>{
+    res.render("Crud/new.ejs");
+    res.redirect("/home");
+})
 
 
 // Start the server
