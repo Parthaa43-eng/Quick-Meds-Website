@@ -5,24 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="/styles.css"> <!-- Example of linking a CSS file -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 <body>
     <header>
-        <h1>Quick-Meds </h1>
+        <h1>Quick-Meds </h1> 
+        <a href="/home/new"><button>Add shop</button></a>
     </header>
     <main>
         <div>
-            <% if (allUsers.length > 0) { %>
-                <% for (const user of allUsers) { %>
-                   <a > <h4><%= user.Shop_Name %></h4></a>
-                <% } %>
-            <% } else { %>
-                <p>No users found.</p>
+            <% for (const user of allUsers) { %>
+               <a href="/home/<%=user._id %>">
+                <h2><%= user.Shop_Name %></h2>
+               </a>
+             <% } %>
+
+             <% if (deletedShopId) { %>
+                <div class="alert">
+                    <p>Shop "<%= shopName %>" deleted.</p>
+                    <button id="undoBtn">Undo</button>
+                </div>
             <% } %>
         </div>
     </main>
     <footer>
         <p>&copy; 2024 Quick Meds. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const deletedShopId = "<%= deletedShopId %>"; // Retrieve deleted shop ID
+            const shopName = "<%= shopName %>"; // Retrieve deleted shop name
+
+            if (deletedShopId) {
+                // Automatically remove the notification after 4 seconds
+                setTimeout(() => {
+                    document.querySelector(".alert").remove();
+                }, 4000);
+
+                // Handle the undo button click
+                document.getElementById("undoBtn").addEventListener("click", async () => {
+                    await fetch(`/home/undo/${deletedShopId}`, {
+                        method: 'POST',
+                    });
+                    window.location.reload(); // Reload the page to show the updated list
+                });
+            }
+        });
+    </script>
 </body>
 </html>

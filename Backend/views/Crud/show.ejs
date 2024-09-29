@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Here are details of shop -- </h2>
+    <img src="<%= user.image %>" alt="<%= user.Shop_Name %> image" style="max-width: 20%; height:20% auto;">
+
+    <h2><%= user.Shop_Name%></h2>
+    <p><%=user.description %></p>
+    
+    <p><%=user.location %></p>
+    <p><%=user.country %></p>
+
+    <form action="/home/<%= user._id %>/edit">
+        <button>Edit &#x1f58a;</button>
+    </form>
+
+    <form method="POST" action="/home/<%= user._id %>?_method=DELETE">
+        <button type="submit">Delete this Shop  &#x2611;</button>
+    </form>
+
+    
+</body>
+</html>
