@@ -7,6 +7,7 @@ const ownerSchema = new mongoose.Schema({
     image: String,
     location: String,
     country: String,
+   
 });
 
 const owner  = mongoose.model("owner" , ownerSchema);

@@ -6,6 +6,9 @@ const data = require("./Database/data.js"); // Importing initial data for databa
 const port = 8080; // Defining the port on which the server will run
 const methodOverride = require("method-override");
 const session = require('express-session');
+const ejsMate = require("ejs-mate");
+
+
 
 const MongoDb_url = "mongodb://127.0.0.1:27017/Quick-meds"; // Defining the MongoDB connection string
 
@@ -35,6 +38,7 @@ app.use(express.static(path.join(__dirname, "public"))); // Serve static files f
 app.use(express.json()); // Middleware for parsing JSON request bodies
 app.use(express.urlencoded({ extended: true })); // Middleware for parsing URL-encoded request bodies
 app.use(methodOverride("_method")); // Use _method to override HTTP methods
+app.engine("ejs" , ejsMate);
 
 app.use(session({
     secret: 'your-secret-key', // Replace with your own secret
@@ -127,6 +131,14 @@ app.post("/home/undo/:id", async (req, res) => {
         res.status(404).send('No deleted shop to restore');
     }
 });
+
+app.get("/login" , (req,res)=>{
+    res.render("Crud/login.ejs");
+});
+
+app.get("/signup" , (req,res)=>{
+    res.render("Crud/signup.ejs");
+})
 
 // Start the server
 app.listen(port, () => {

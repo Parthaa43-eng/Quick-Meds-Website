@@ -1,0 +1,101 @@
+.navbar {
+    height: 100px;
+    background-color: rgb(250, 249, 249);
+    border: 2px solid black;
+    padding: 0; /* Remove padding to allow logo to touch the navbar */
+    margin: 1px;
+    border-radius: 0%;
+    display: flex; /* Use flexbox for better alignment */
+    align-items: center; /* Center items vertically */
+}
+.logo {
+    font-size: x-large;
+    color: #2e632e; /* Dark green color */
+    background: linear-gradient(90deg, #4caf50, #81c784); /* Green gradient */
+    -webkit-background-clip: text; /* Clips the background to the text */
+    -webkit-text-fill-color: transparent; /* Makes the text fill transparent */
+    font-weight: bold; /* Makes it bolder */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transform on hover */
+}
+
+.logo:hover {
+    transform: scale(1.05); /* Slightly enlarge the logo on hover */
+}
+
+.navbar {
+    height: 100px;
+    background-color: rgb(250, 249, 249);
+    border: 2px solid black;
+    padding: 0; /* Remove padding to allow logo to touch the navbar */
+    margin: 1px;
+    border-radius: 0%;
+    display: flex; /* Use flexbox for better alignment */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+.searchBar {
+    display: flex; /* Align children in a row */
+    align-items: center; /* Center vertically */
+    margin-left: 20px; /* Adjust margin-left for spacing */
+}
+
+.btn {
+    border-radius: 25px; /* Circular edges */
+    padding: 12px 20px; /* Add padding for button aesthetics */
+    margin-left: 10px; /* Space between input and button */
+}
+
+
+.search-input {
+    border-radius: 25px; /* Circular edges */
+    padding: 12px 20px; /* Add padding for aesthetics */
+    width: 100%; /* Full width of the search bar */
+    border: 1px solid #ccc; /* Border color */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.search-input:focus {
+    border-color: rgb(46, 98, 46); /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+body {
+    background-color: #f8f9fa; /* Light background color */
+}
+
+.container {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+}
+
+.login-form {
+    background-color: white; /* White background for the form */
+    padding: 40px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    width: 300px; /* Fixed width */
+}
+
+h2 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.btn {
+    border-radius: 25px; /* Circular edges */
+}
+
+a {
+    color: #007bff; /* Bootstrap primary color */
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+
+
+
