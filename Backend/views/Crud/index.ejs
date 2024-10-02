@@ -1,15 +1,18 @@
 <% layout("layouts/boilerplate.ejs") %> 
 <body>
-   
     <main>
-        <div>
+        <div class="card-container">
             <% for (const user of allUsers) { %>
-               <a href="/home/<%=user._id %>">
-                <h2><%= user.Shop_Name %></h2>
-               </a>
-             <% } %>
+                <div class="shop-card">
+                    
+                    <a href="/home/<%= user._id %>">
+                        <img class="Shopimg" src="<%= user.image %>" alt="No image">
+                        <h2 class="shop-name"><%= user.Shop_Name %></h2>
+                    </a>
+                </div>
+            <% } %>
 
-             <% if (deletedShopId) { %>
+            <% if (deletedShopId) { %>
                 <div class="alert">
                     <p>Shop "<%= shopName %>" deleted.</p>
                     <button id="undoBtn">Undo</button>
@@ -43,4 +46,3 @@
         });
     </script>
 </body>
-

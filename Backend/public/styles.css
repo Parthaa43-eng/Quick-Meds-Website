@@ -1,3 +1,7 @@
+body {
+    background-color: #f8f9fa; /* Light background color */
+}
+
 .navbar {
     height: 100px;
     background-color: rgb(250, 249, 249);
@@ -7,7 +11,9 @@
     border-radius: 0%;
     display: flex; /* Use flexbox for better alignment */
     align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Align items to the left */
 }
+
 .logo {
     font-size: x-large;
     color: #2e632e; /* Dark green color */
@@ -23,30 +29,11 @@
     transform: scale(1.05); /* Slightly enlarge the logo on hover */
 }
 
-.navbar {
-    height: 100px;
-    background-color: rgb(250, 249, 249);
-    border: 2px solid black;
-    padding: 0; /* Remove padding to allow logo to touch the navbar */
-    margin: 1px;
-    border-radius: 0%;
-    display: flex; /* Use flexbox for better alignment */
-    align-items: center; /* Center items vertically */
-    justify-content: flex-start; /* Align items to the left */
-}
-
 .searchBar {
     display: flex; /* Align children in a row */
     align-items: center; /* Center vertically */
     margin-left: 20px; /* Adjust margin-left for spacing */
 }
-
-.btn {
-    border-radius: 25px; /* Circular edges */
-    padding: 12px 20px; /* Add padding for button aesthetics */
-    margin-left: 10px; /* Space between input and button */
-}
-
 
 .search-input {
     border-radius: 25px; /* Circular edges */
@@ -59,10 +46,6 @@
 .search-input:focus {
     border-color: rgb(46, 98, 46); /* Change border color on focus */
     outline: none; /* Remove default outline */
-}
-
-body {
-    background-color: #f8f9fa; /* Light background color */
 }
 
 .container {
@@ -86,16 +69,117 @@ h2 {
 
 .btn {
     border-radius: 25px; /* Circular edges */
+    padding: 12px 20px; /* Add padding for button aesthetics */
+    margin-left: 10px; /* Space between input and button */
+    color: #ffffff; /* Change text color to white for better contrast */
+    background-color: rgb(46, 98, 46); /* Match the search button's background color */
+    border: none; /* Remove any default border */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
+
+.btn:hover {
+    background-color: rgb(36, 78, 36); /* Darker shade for hover effect */
+}
+
 
 a {
-    color: #007bff; /* Bootstrap primary color */
-}
-
-a:hover {
-    text-decoration: underline; /* Underline on hover */
+    color:#2e632e; /* Bootstrap primary color */
 }
 
 
 
+.alert {
+    background-color: #f44336; /* Red */
+    color: white;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the grid */
+}
+
+.shop-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd; /* Border around the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+    overflow: hidden; /* Clip any overflow */
+    text-align: center; /* Center text */
+    display: flex; /* Use flexbox for the card */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: space-between; /* Space items evenly */
+    height: 300px; /* Set a fixed height for uniformity */
+}
+
+.shop-card img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    flex-grow: 1; /* Allow image to grow and fill space */
+    object-fit: cover; /* Ensure the image covers the card without distortion */
+}
+
+.shop-name {
+    margin: 10px 0; /* Margin around shop name */
+    font-size: 1.2em; /* Font size */
+    color: #333; /* Text color */
+}
+
+/* Hover effects */
+.shop-card:hover {
+    transform: translateY(-5px); /* Raise card on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+.shop-card:hover .shop-name {
+    color: #007bff; /* Change text color on hover */
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 20px; /* Space between cards */
+    padding: 20px; /* Padding around the grid */
+}
+
+.shop-card {
+    background-color: #ffffff;
+    border: 1px solid #ddd; /* Border around the card */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition effects */
+    overflow: hidden; /* Clip any overflow */
+    text-align: center; /* Center text */
+    display: flex; /* Use flexbox for the card */
+    flex-direction: column; /* Arrange items vertically */
+    justify-content: space-between; /* Space items evenly */
+    height: 300px; /* Set a fixed height for uniformity */
+}
+
+.shop-card img {
+    width: 100%; /* Full width */
+    height: auto; /* Maintain aspect ratio */
+    flex-grow: 1; /* Allow image to grow and fill space */
+    object-fit: cover; /* Ensure the image covers the card without distortion */
+}
+
+.shop-name {
+    margin: 10px 0; /* Margin around shop name */
+    font-size: 1.2em; /* Font size */
+    color: #333; /* Text color */
+}
+
+/* Hover effects */
+.shop-card:hover {
+    transform: translateY(-5px); /* Raise card on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow */
+}
+
+.shop-card:hover .shop-name {
+    color: #2e632e; /* Change text color on hover */
+}
 

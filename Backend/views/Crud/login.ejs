@@ -6,14 +6,14 @@
     <title>Login - Quick-Meds</title>
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css"> <!-- Optional custom CSS file -->
 </head>
 <body>
 
 <div class="container">
     <div class="login-form">
         <h2 class="text-center">Login to Quick-Meds</h2>
-        <form>
+        <form id="loginForm" action="/login">
             <div class="form-group">
                 <label for="email">Email address</label>
                 <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
@@ -33,9 +33,41 @@
     </div>
 </div>
 
-<!-- Bootstrap JS -->
+<!-- Bootstrap JS and dependencies -->
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript for handling form submission -->
+<script>
+  document.getElementById('loginForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent form from submitting the traditional way
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    try {
+      const response = await fetch('/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ email, password })
+      });
+
+      if (response.ok) {
+        // Redirect to dashboard or homepage on successful login
+        window.location.href = '/dashboard';
+      } else {
+        const errorMessage = await response.text();
+        alert('Login failed: ' + errorMessage); // Show an alert or display error on the page
+      }
+    } catch (err) {
+      console.error('Error:', err);
+      alert('An error occurred. Please try again.');
+    }
+  });
+</script>
+
 </body>
 </html>
