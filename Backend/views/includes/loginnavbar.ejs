@@ -9,10 +9,8 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    
 
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="logo">
       <a href="/home"><b>Quick-Meds</b></a>
     </div>
@@ -20,7 +18,9 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-       
+        <li class="nav-item active">
+          <a class="nav-link" href="/home">Home</a>
+        </li>
         <li class="nav-item">
           <a class="nav-link" href="/home/new">Add shop</a>
         </li>
@@ -35,20 +35,7 @@
         </li>
       </ul>
       
-      <div class="searchBar">
-        <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
-      </div>
-  
-      <a href="/signup">
-        <button class="btn btn-outline-success ml-3" type="button">Login / Signup</button>
-      </a>
-
-      <label class="switch">
-        <input type="checkbox" id="darkModeToggle">
-        <span class="slider round"></span>
-      </label>
-    </div>
+     
   </nav>
   
 
@@ -62,27 +49,3 @@
 
 </body>
 </html>
-
-<script>
-  const darkModeToggle = document.getElementById('darkModeToggle');
-const body = document.body;
-
-// Apply saved theme preference on page load
-if (localStorage.getItem('theme') === 'dark') {
-  body.classList.add('dark-mode');
-  document.querySelector('.navbar').classList.add('dark-mode');
-  document.querySelector('.searchBar .form-control').classList.add('dark-mode');
-  darkModeToggle.checked = true;
-}
-
-darkModeToggle.addEventListener('change', () => {
-  body.classList.toggle('dark-mode');
-  document.querySelector('.navbar').classList.toggle('dark-mode');
-  document.querySelector('.searchBar .form-control').classList.toggle('dark-mode');
-  
-  // Save user's preference in localStorage
-  localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-});
-
-
-</script>

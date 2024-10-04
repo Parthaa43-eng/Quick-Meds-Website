@@ -3,8 +3,8 @@ body {
 }
 
 .navbar {
-    height: 100px;
-    background-color: rgb(250, 249, 249);
+    height: 200px;
+    background-color: rgb(249, 250, 250);
     border: 2px solid black;
     padding: 0; /* Remove padding to allow logo to touch the navbar */
     margin: 1px;
@@ -71,8 +71,8 @@ h2 {
     border-radius: 25px; /* Circular edges */
     padding: 12px 20px; /* Add padding for button aesthetics */
     margin-left: 10px; /* Space between input and button */
-    color: #ffffff; /* Change text color to white for better contrast */
-    background-color: rgb(46, 98, 46); /* Match the search button's background color */
+    color: #000000; /* Change text color to white for better contrast */
+    background-color: white; /* Match the search button's background color */
     border: none; /* Remove any default border */
     transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
@@ -183,3 +183,107 @@ a {
     color: #2e632e; /* Change text color on hover */
 }
 
+/* Default Light Theme */
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.navbar {
+  background-color: #f8f9fa;
+}
+
+.nav-link, .navbar-brand {
+  color: #000000;
+}
+
+.searchBar .form-control {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.btn-outline-success {
+  color: #28a745;
+  border-color: #28a745;
+}
+
+.logo a {
+  font-size: 24px;
+  color: #000000;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.navbar.dark-mode {
+  background-color: #333333;
+}
+
+.navbar.dark-mode .nav-link,
+.navbar.dark-mode .navbar-brand {
+  color: #e0e0e0;
+}
+
+.searchBar .form-control.dark-mode {
+  background-color: #333333;
+  color: #e0e0e0;
+}
+
+.btn-outline-success.dark-mode {
+  color: #e0e0e0;
+  border-color: #e0e0e0;
+}
+
+.logo.dark-mode a {
+  color: #e0e0e0;
+}
+
+/* Toggle Switch Styling */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  margin-left: 20px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 21px;
+  width: 21px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #28a745;
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}

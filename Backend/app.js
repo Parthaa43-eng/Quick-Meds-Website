@@ -11,6 +11,7 @@ const ejsMate = require("ejs-mate");
 const passport = require("passport");
 const localStratergy = require("passport-local");
 const User = require('./Models/validation'); // Adjust the path as necessary
+const userRouter = require("./routes/user.js");   
 
 // Session configuration options
 const sessionOptions = {
@@ -56,10 +57,22 @@ app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
 
+app.use("/" , userRouter);
+
 // Passport configuration
 passport.use(new localStratergy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
+
+app.get("/demouser" , async(req,res)=>{
+    let fakeUser = new User({
+        email:"abcd@email.com",
+        username : "abcd"
+    })
+
+   let registerUser =  await User.register(fakeUser , "passwors");
+   res.send(registerUser);
+})
 
 // Routes
 app.get("/home", async (req, res) => {
@@ -76,8 +89,15 @@ app.get("/home", async (req, res) => {
 });
 
 app.get("/home/new", (req, res) => {
-    res.render("Crud/new.ejs");
+    if (!req.isAuthenticated()) {
+        req.flash("error", "Please log in first");
+        return res.redirect("/login"); // Redirect to a valid route, use '/' or another route instead of an EJS file
+    } else {
+        res.render("Crud/new.ejs"); // Only render the form if the user is authenticated
+    }
 });
+
+
 
 app.post("/home", async (req, res) => {
     const newOwner = new users(req.body.owner);
@@ -129,9 +149,6 @@ app.post("/home/undo/:id", async (req, res) => {
     }
 });
 
-app.get("/login", (req, res) => {
-    res.render("Crud/login.ejs");
-});
 
 // Start the server
 app.listen(port, () => {

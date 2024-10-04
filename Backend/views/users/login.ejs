@@ -1,0 +1,21 @@
+<% layout("layouts/loginboilerplate.ejs") %> 
+ <link rel="stylesheet" href="/userStyles.css">
+
+<body>
+    <div class="signup-container">
+        <form class="signup-form" action="/login" method="POST" class="need-validation">
+            <h2>Login </h2>
+            <div class="input-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+           
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <button type="submit" class="signup-btn">Sign Up</button>
+        </form>
+    </div>
+</body>
+
