@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,42 +8,44 @@
   <!-- Bootstrap CSS -->
   <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
 </head>
-<body>
-  
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    
 
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
     <div class="logo">
-      <a href="/home"><b>Quick-Meds</b></a>
+      <a href="/home">Quick-Meds</a>
     </div>
-    &nbsp; &nbsp;&nbsp;
-  
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-       
         <li class="nav-item">
-          <a class="nav-link" href="/home/new">Add shop</a>
+          <a class="nav-link" href="/home/new">Add Shop</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
             Dropdown
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/home/new">Add shop</a>
-            <!--<a class="dropdown-item" href="#">Another action</a--> 
+            <a class="dropdown-item" href="/home/new">Add Shop</a>
           </div>
         </li>
       </ul>
-      
+
       <div class="searchBar">
-         <a href="">
-          Dilevered To <br> India
-         </a>
+        <a href="" class="text-white mr-2">
+          Delivered To <i class="fa-solid fa-user"></i><br> India
+        </a>
         <input class="form-control search-input" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <button class="btn btn-outline-success ml-2" type="submit">Search</button>
       </div>
-  
+
       <a href="/signup">
         <button class="btn btn-outline-success ml-3" type="button">Login / Signup</button>
       </a>
@@ -53,39 +56,38 @@
       </label>
     </div>
   </nav>
+
+  <!-- Include jQuery and Bootstrap JS (for Bootstrap 4) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    const darkModeToggle = document.getElementById('darkModeToggle');
+    const body = document.body;
   
+    // Apply saved theme preference on page load
+    if (localStorage.getItem('theme') === 'dark') {
+      body.classList.add('dark-mode');
+      document.querySelector('.navbar').classList.add('dark-mode');
+      document.querySelector('.searchBar .form-control').classList.add('dark-mode');
+      darkModeToggle.checked = true;
+    }
+  
+    darkModeToggle.addEventListener('change', () => {
+      body.classList.toggle('dark-mode');
+      document.querySelector('.navbar').classList.toggle('dark-mode');
+      document.querySelector('.searchBar .form-control').classList.toggle('dark-mode');
+  
+      // Save user's preference in localStorage
+      localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
+    });
 
-<!-- Include Bootstrap CSS -->
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Include jQuery and Bootstrap JS (for Bootstrap 4) -->
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+   
+   
+    
+  </script>
+  
 </body>
+
 </html>
-
-<script>
-  const darkModeToggle = document.getElementById('darkModeToggle');
-const body = document.body;
-
-// Apply saved theme preference on page load
-if (localStorage.getItem('theme') === 'dark') {
-  body.classList.add('dark-mode');
-  document.querySelector('.navbar').classList.add('dark-mode');
-  document.querySelector('.searchBar .form-control').classList.add('dark-mode');
-  darkModeToggle.checked = true;
-}
-
-darkModeToggle.addEventListener('change', () => {
-  body.classList.toggle('dark-mode');
-  document.querySelector('.navbar').classList.toggle('dark-mode');
-  document.querySelector('.searchBar .form-control').classList.toggle('dark-mode');
-  
-  // Save user's preference in localStorage
-  localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-});
-
-
-</script>

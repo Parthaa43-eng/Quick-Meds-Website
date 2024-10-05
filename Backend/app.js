@@ -13,6 +13,7 @@ const localStratergy = require("passport-local");
 const User = require('./Models/validation'); // Adjust the path as necessary
 const userRouter = require("./routes/user.js");   
 
+
 // Session configuration options
 const sessionOptions = {
     secret: 'your_secret_key', // Replace with your secret
