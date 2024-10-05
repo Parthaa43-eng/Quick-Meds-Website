@@ -113,40 +113,121 @@ body {
     margin: 20px;
   }
   
-  .shop-card {
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    text-align: center;
-    height: 300px;
+  /* General body styling */
+
+
+/* Heading */
+/* General body styling */
+
+
+/* Heading */
+/* Heading */
+h1 {
+  color: #3b5998;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Loader styling */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+  display: block;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Shop container styling */
+.shop-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  display: none; /* Hide content initially */
+}
+
+/* Shop card anchor styling */
+.shop-card {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Individual shop card */
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Shop image styling */
+.img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Card content styling */
+.card-content {
+  text-align: center;
+}
+
+.card-content h4 {
+  font-size: 1.4em;
+  margin: 10px 0;
+}
+
+.card-content p {
+  font-size: 1em;
+  color: #666;
+}
+
+/* Explore button */
+.explore-btn {
+  padding: 8px 15px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.explore-btn:hover {
+  background-color: #2980b9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .card {
+      flex-direction: column;
+      align-items: flex-start;
   }
-  
-  .shop-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-  }
-  
-  .shop-name {
-    font-size: 1.2em;
-    color: #333;
-    padding: 10px;
-  }
-  
-  .shop-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .shop-card:hover .shop-name {
-    color: #007bff;
-  }
+}
+
   
   /* Alert for shop deletion */
   .alert {

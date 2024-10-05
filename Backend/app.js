@@ -78,15 +78,7 @@ app.get("/demouser" , async(req,res)=>{
 // Routes
 app.get("/home", async (req, res) => {
     const allUsers = await users.find({});
-    const deletedShop = req.session.deletedShop;
-
-    res.render("Crud/index.ejs", {
-        allUsers,
-        deletedShopId: deletedShop ? deletedShop._id : null,
-        shopName: deletedShop ? deletedShop.Shop_Name : null
-    });
-
-    req.session.deletedShop = null;
+    res.render("Crud/index.ejs", {allUsers});
 });
 
 app.get("/home/new", (req, res) => {
@@ -98,7 +90,10 @@ app.get("/home/new", (req, res) => {
     }
 });
 
-
+app.get("/shops" , async(req,res)=>{
+    const allUsers = await users.find({});
+    res.render("Crud/shop.ejs" , {allUsers});
+})
 
 app.post("/home", async (req, res) => {
     const newOwner = new users(req.body.owner);

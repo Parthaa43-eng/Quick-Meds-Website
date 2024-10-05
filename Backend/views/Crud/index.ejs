@@ -193,42 +193,12 @@
             <hr class="custom-hr" />
             <p class="tagline"> <a href="/home">@Quick-Meds private Lim. All rights reserved</a></p>
         </footer>
-        
+            
         
         
     </footer>
     
     
 
-    <script>
-        function toggleDropdown(dropdownId) {
-    const dropdown = document.getElementById(dropdownId);
-    // Toggle the display property
-    if (dropdown.style.display === "none" || dropdown.style.display === "") {
-        dropdown.style.display = "block";
-    } else {
-        dropdown.style.display = "none";
-    }
-}
-
-
-        document.addEventListener("DOMContentLoaded", () => {
-            const deletedShopId = "<%= deletedShopId %>"; // Retrieve deleted shop ID
-
-            if (deletedShopId) {
-                // Automatically remove the notification after 4 seconds
-                setTimeout(() => {
-                    document.querySelector(".alert").remove();
-                }, 4000);
-
-                // Handle the undo button click
-                document.getElementById("undoBtn").addEventListener("click", async () => {
-                    await fetch(`/home/undo/${deletedShopId}`, {
-                        method: 'POST',
-                    });
-                    window.location.reload(); // Reload the page to show the updated list
-                });
-            }
-        });
-    </script>
+   
 </body>
