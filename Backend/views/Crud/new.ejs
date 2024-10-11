@@ -1,29 +1,28 @@
-<% layout("layouts/boilerplate.ejs") %> 
+<% layout("layouts/boilerplate.ejs") %>
 <body>
-    <h1>Add new medico</h1>
+    <h1>Add New Medico</h1>
 
-    <form action="/home" method="POST">
-        <label for=" Shop_Name">Shop Name</label>
-        <input type="text" name="owner[Shop_Name]" id=" Shop_Name" placeholder="Enter shop name" >
+    <form action="/shops" method="POST"> <!-- Updated action to /shops -->
+        <label for="Shop_Name">Shop Name</label>
+        <input type="text" name="owner[Shop_Name]" id="Shop_Name" placeholder="Enter shop name" required> <!-- Removed leading space in id -->
         <br><br>
         
         <label for="description">Shop Description</label>
-        <textarea name="owner[description]" id="description" placeholder="Enter something about shop" ></textarea>
+        <textarea name="owner[description]" id="description" placeholder="Enter something about the shop" required></textarea> <!-- Added required -->
         <br><br>
 
         <label for="image">Shop Image</label>
-        <input type="text" name="owner[image]" id="image" placeholder="Enter image URL">
+        <input type="text" name="owner[image]" id="image" placeholder="Enter image URL" required> <!-- Added required -->
         <br><br>
 
         <label for="location">Shop Location</label>
-        <input type="text" name="owner[location]" id="location" placeholder="Enter shop location" >
+        <input type="text" name="owner[location]" id="location" placeholder="Enter shop location" required> <!-- Added required -->
         <br><br>
 
         <label for="country">Country</label>
-        <input type="text" name="owner[country]" id="country" placeholder="Enter country" >
+        <input type="text" name="owner[country]" id="country" placeholder="Enter country" required> <!-- Added required -->
         <br><br>
 
         <button type="submit">Add</button>
     </form>
 </body>
-

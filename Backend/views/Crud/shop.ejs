@@ -1,22 +1,21 @@
-
-
-    <link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+<link rel="stylesheet" href="styles.css"> <!-- External CSS file -->
+<% layout("layouts/boilerplate.ejs") %>
 
 <body>
     <h1>All Shops</h1>
 
-    <!-- Loader (will be hidden after the content is loaded) -->
-    <div id="loader" class="loader"></div>
+    <div class="spinner-border" role="status" id="loader">
+        <span class="sr-only">Loading...</span>
+    </div>
 
     <div class="shop-container" id="shop-container">
         <% allUsers.forEach(function(user) { %>
-            <a href="/shop/<%= user._id %>" class="shop-card"> <!-- Wrap card inside an anchor tag -->
+            <a href="/shops/<%= user._id %>" class="shop-card"> <!-- Wrap card inside an anchor tag -->
                 <div class="card">
                     <img class="img" src="<%= user.image %>" alt="Image of <%= user.Shop_Name %>">
                     <div class="card-content">
                         <h4><%= user.Shop_Name %></h4>
-                        <p>Best offers available</p> <!-- Example description -->
-                        <button class="explore-btn">Explore Shop</button> <!-- Added button for better interactivity -->
+                        
                     </div>
                 </div>
             </a>
@@ -35,4 +34,3 @@
         });
     </script>
 </body>
-

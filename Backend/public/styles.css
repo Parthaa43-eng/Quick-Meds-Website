@@ -1,102 +1,13 @@
 /* General body styling */
+/* Body */
 body {
-    background-color: rgb(239, 234, 234); /* Light background */
-    font-family: Arial, sans-serif; /* Modern font choice */
-    margin: 0;
-    padding: 0;
+  background-color: #f7f8f9; /* Slightly off-white to keep it light and modern */
+  font-family: "Segoe UI", Tahoma, sans-serif; /* Clean, professional, and easy-to-read font */
+  margin: 0;
+  padding: 0;
+  color: #333; /* Dark grey text for readability */
 }
 
-/* Navbar */
-.navbar {
-    height: 100px;
-    background-color: rgb(249, 250, 250);
-    border: 2px solid black;
-    margin: 1px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-
-.logo {
-    font-size: x-large;
-    color: #2e632e; /* Dark green color */
-    background: linear-gradient(90deg, #4caf50, #81c784); /* Green gradient */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.logo:hover {
-    transform: scale(1.05); /* Slight hover effect */
-}
-
-.searchBar {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 10px 20px;
-    background-color: rgb(249, 250, 250);
-    border-radius: 10px;
-    width: 800px;
-    margin: 20px auto;
-}
-
-.searchBar p {
-    margin: 0;
-    font-weight: bold;
-    color: #444;
-    font-size: 1.1rem;
-}
-
-.searchBar .search-input {
-    flex: 1;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-}
-
-.searchBar .search-input:focus {
-    border-color: #28a745; /* Green border on focus */
-    outline: none;
-}
-
-.searchBar button {
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.searchBar button:hover {
-    background-color: #28a745; /* Green background on hover */
-    color: white;
-}
-
-/* Add any other existing CSS styles below */
-
-  
-  
-  .search-input {
-    border-radius: 25px;
-    padding: 12px 20px;
-    width: 100%;
-    border: 1px solid #ccc;
-    transition: border-color 0.3s;
-  }
-  
-  .search-input:focus {
-    border-color: rgb(46, 98, 46); /* Change border color on focus */
-    outline: none;
-  }
-  
   /* Carousel styling */
   .carousel-item img {
     width: 100%;
@@ -128,96 +39,68 @@ h1 {
   margin-bottom: 30px;
 }
 
-/* Loader styling */
-.loader {
-  border: 16px solid #f3f3f3;
-  border-radius: 50%;
-  border-top: 16px solid #3498db;
-  width: 120px;
-  height: 120px;
-  animation: spin 2s linear infinite;
-  margin: auto;
-  display: block;
+h1 {
+  text-align: center;
+  margin: 20px 0;
 }
 
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+.spinner-border {
+  display: none; /* Initially hidden */
+  margin: 0 auto;
 }
 
-/* Shop container styling */
 .shop-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  display: none; /* Hide content initially */
+  display: none; /* Initially hidden */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Space between cards */
+  padding: 20px; /* Padding around the shop container */
 }
 
-/* Shop card anchor styling */
 .shop-card {
-  text-decoration: none;
-  color: inherit;
+  text-decoration: none; /* Remove underline from links */
 }
 
-/* Individual shop card */
 .card {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 15px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #fff; /* White background for cards */
+  border: 1px solid #ccc; /* Light border for cards */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  transition: transform 0.3s ease; /* Animation on hover */
 }
 
 .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  transform: translateY(-5px); /* Lift effect on hover */
 }
 
-/* Shop image styling */
 .img {
-  width: 100%;
-  height: 170px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin-bottom: 10px;
+  width: 100%; /* Full width */
+  height: 150px; /* Fixed height for images */
+  object-fit: cover; /* Cover to maintain aspect ratio */
 }
 
-/* Card content styling */
 .card-content {
-  text-align: center;
+  padding: 15px; /* Padding inside card */
+  text-align: center; /* Center text */
 }
 
-.card-content h4 {
-  font-size: 1.4em;
-  margin: 10px 0;
+h4 {
+  margin: 10px 0; /* Space around heading */
+  color: #333; /* Dark text color */
 }
 
-.card-content p {
-  font-size: 1em;
-  color: #666;
-}
-
-/* Explore button */
 .explore-btn {
-  padding: 8px 15px;
-  background-color: #3498db;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-top: 10px;
+  background-color: #4CAF50; /* Green background for button */
+  color: white; /* White text for button */
+  border: none; /* Remove border */
+  padding: 10px 15px; /* Padding for button */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background 0.3s ease; /* Smooth background change */
 }
 
 .explore-btn:hover {
-  background-color: #2980b9;
+  background-color: #45a049; /* Darker green on hover */
 }
 
 /* Responsive adjustments */
@@ -247,88 +130,6 @@ h1 {
   /* Footer */
   
 
-.dropdown-content {
-    display: none; /* Hide by default */
-    margin-top: 10px;
-    background-color: #e2e2e2; /* Change as needed */
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.dropdown-header {
-    cursor: pointer; /* Show a pointer on hover */
-}
-
-  /* Dark mode styles */
-  body.dark-mode {
-    background-color: #121212;
-    color: #e0e0e0;
-  }
-  
-  .navbar.dark-mode {
-    background-color: #333333;
-  }
-  
-  .dark-mode .search-input {
-    background-color: #333333;
-    color: #e0e0e0;
-  }
-  
-  .dark-mode .shop-card {
-    background-color: #222;
-    border-color: #444;
-  }
-  
-  .dark-mode .shop-name {
-    color: #e0e0e0;
-  }
-  
-  /* Toggle Switch */
-  .switch {
-    position: relative;
-    display: inline-block;
-    width: 50px;
-    height: 25px;
-    margin-left: 20px;
-  }
-  
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 34px;
-  }
-  
-  .slider:before {
-    position: absolute;
-    content: "";
-    height: 21px;
-    width: 21px;
-    left: 4px;
-    bottom: 2px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
-  }
-  
-  input:checked + .slider {
-    background-color: #28a745;
-  }
-  
-  input:checked + .slider:before {
-    transform: translateX(26px);
-  }
   
   .slidingImages {
     margin: 20px auto;
@@ -423,21 +224,28 @@ a:hover {
     text-decoration: none;
 }
 
+/* Buy Options Section */
 .buyOptions {
-    padding: 10px;
-    display: flex;              /* Use flexbox to arrange the cards in a row */
-    justify-content: space-around; /* Equal spacing between cards */
-    flex-wrap: wrap;           /* Allow wrapping to the next line on smaller screens */
+  background-color: #ff6f61; /* Bold coral color for high contrast and energy */
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  border-radius: 10px; /* Softer rounded corners for a modern look */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
 }
+
 .tagline {
     text-align: center;  /* Center align the text */
     margin: 0 auto;      /* Optional: Center the element itself if it has a defined width */
 }
 
+/* Footer (for consistency) */
 .footer {
-    background-color: #ffffff; /* Change as needed */
-    padding: 20px;
-    height: auto;
+  background-color: #2b2d42; /* Dark greyish blue */
+  color: white;
+  padding: 1.5rem 2rem;
+  text-align: center;
 }
 
 .footer_img {
@@ -482,4 +290,417 @@ a:hover {
 
 .footerColumn a:hover {
     text-decoration: underline; /* Underline on hover */
+}
+
+
+
+  h1 {
+    text-align: center;
+    color: #2c3e50;
+  }
+
+  form {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+  }
+
+  label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+  }
+
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+  }
+
+  textarea {
+    resize: vertical; /* Allows vertical resizing */
+    height: 100px; /* Set a default height */
+  }
+
+  /* Button Styles for Added Impact */
+  .button {
+    background-color: #ffa500; /* Bright orange for energetic calls-to-action */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .button:hover {
+    background-color: #ff8c00; /* Darken on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  }
+
+  /* Responsive styles */
+  @media (max-width: 600px) {
+    form {
+        width: 90%;
+    }
+  }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: #f3f4f7; /* Soft background for contrast */
+}
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  color: white;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: linear-gradient(90deg, #1a2a6c, #b21f1f, #fdbb2d);
+  transition: background 0.5s ease, transform 0.3s ease;
+}
+
+.navbar:hover {
+  background: linear-gradient(90deg, #fdbb2d, #b21f1f, #1a2a6c); /* Reverse the gradient on hover */
+  transform: translateY(-2px); /* Lift effect on hover */
+}
+
+.nav-item {
+  margin: 0 1rem; /* Space between nav items */
+}
+
+.logo {
+  font-size: 2.5rem; /* Increased font size */
+  font-weight: bold;
+  font-family: 'Pacifico', cursive; /* Stylish logo */
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+}
+
+/* Search container styling */
+.search-container {
+  display: flex;
+  justify-content: center; /* Center search bar */
+  align-items: center;
+  flex-grow: 1; /* Allow it to grow */
+  padding: 10px;
+}
+
+.search-bar {
+  width: 400px; /* Adjusted width */
+  padding: 0.5rem;
+  border: none;
+  border-radius: 20px; /* More rounded corners */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: width 0.55s ease, box-shadow 0.4s ease; /* Smooth transition for width and shadow */
+}
+
+
+.search-bar:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 122, 204, 0.5); /* Focus effect */
+  border-radius: 30px; /* Increase rounding on focus */
+}
+
+/* Nav links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin-left: auto; /* Align nav links to the right */
+}
+
+.nav-links li {
+  margin-left: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  transition: color 0.4s ease, transform 0.4s ease;
+  position: relative;
+  padding-bottom: 0.2rem;
+}
+
+.nav-links a::after {
+  content: '';
+  display: block;
+  height: 2px;
+  width: 0%;
+  background: #b3e0ff; /* Light blue underline */
+  transition: width 0.4s ease;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.nav-links a:hover {
+  color: #b3e0ff; /* Softer light blue on hover */
+  transform: translateY(-4px); /* Lift effect */
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Underline expands on hover */
+}
+
+/* Mobile styling */
+@media screen and (max-width: 768px) {
+  .nav-links {
+      position: absolute;
+      right: 0;
+      top: 60px;
+      height: 100vh;
+      width: 100%;
+      background-color: #005f99; /* Darker blue for mobile menu */
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      display: none;
+  }
+
+  .nav-links.show {
+      display: flex;
+  }
+
+  .nav-links li {
+      margin: 1.5rem 0;
+  }
+
+  .hamburger {
+      display: flex;
+      flex-direction: column;
+      cursor: pointer; /* Hand cursor on hover */
+  }
+
+  .hamburger .bar {
+      height: 3px;
+      width: 25px;
+      background-color: white;
+      margin: 2px 0; /* Space between bars */
+      transition: all 0.3s ease; /* Smooth transition for bars */
+  }
+
+  .hamburger.active .bar:nth-child(2) {
+      opacity: 0; /* Middle bar disappears */
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg); /* Top bar rotates */
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg); /* Bottom bar rotates */
+  }
+}
+
+.about-container {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+  background-color: #ffffff; /* White background for the about section */
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+h2 {
+  color: #3498db;
+  margin-top: 20px;
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.team-member {
+  flex: 1 1 calc(45% - 20px); /* Responsive layout */
+  margin: 10px;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  background-color: #f8f9fa; /* Light background for team members */
+}
+
+.team-member h3 {
+  color: #333;
+}
+
+footer {
+  background-color: #f8f9fa; /* Light footer background */
+  padding: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-links a {
+  margin: 0 10px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+.container {
+    max-width: 500px; /* Center the form */
+    margin: 50px auto; /* Center the container vertically */
+    padding: 20px;
+    background-color: #ffffff; /* White background */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+h2 {
+    text-align: center;
+    color: #2c3e50; /* Dark text color for headings */
+}
+
+.form-group label {
+    color: #333; /* Darker color for labels */
+}
+
+.btn-primary {
+    background-color: #3498db; /* Match button color with navbar */
+    border: none; /* Remove border */
+    color: white; /* White text for the button */
+}
+
+.btn-primary:hover {
+    background-color: #2980b9; /* Darker shade on hover */
+}
+
+footer {
+    background-color: #f8f9fa; /* Light footer background */
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer-links a {
+    margin: 0 10px;
+    color: #007bff; /* Footer link color */
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+/* General container styling */
+.container {
+  max-width: 600px; /* Maximum width for the form container */
+  margin: 50px auto; /* Center the container */
+  padding: 20px; /* Add padding around the container */
+  background-color: #fff; /* White background for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Form heading */
+h2 {
+  color: #3b5998; /* Consistent heading color */
+  text-align: center; /* Center the heading */
+}
+
+/* Form group styling */
+.form-group {
+  margin-bottom: 15px; /* Space between form fields */
+}
+
+/* Input fields styling */
+.form-control {
+  width: 100%; /* Full width input fields */
+  padding: 10px; /* Padding for input fields */
+  border: 1px solid #ccc; /* Light grey border */
+  border-radius: 5px; /* Rounded corners */
+  transition: border-color 0.3s; /* Transition effect */
+}
+
+.form-control:focus {
+  border-color: #3498db; /* Blue border on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button styling */
+.btn {
+  padding: 10px 15px; /* Button padding */
+  background-color: #2b2d42;
+  color: white; /* White text */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s; /* Transition effect */
+  width: 100%; /* Full width button */
+}
+
+.btn:hover {
+  background-color: #363742; /* Darker blue on hover */
+}
+
+/* Footer styling */
+footer {
+  background-color: #2b2d42; /* Dark greyish blue */
+  color: white; /* White text */
+  padding: 1.5rem 0; /* Padding for footer */
+  text-align: center; /* Center text */
+}
+
+.footer-content {
+  margin-bottom: 10px; /* Space below footer content */
+}
+
+.footer-links a {
+  color: white; /* White links */
+  margin: 0 10px; /* Space between links */
+  text-decoration: none; /* Remove underline */
+}
+
+.footer-links a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .container {
+      margin: 20px; /* Adjust margin for smaller screens */
+      padding: 15px; /* Adjust padding for smaller screens */
+  }
+}
+
+.dropdown-content {
+  display: none; /* Hide dropdown by default */
+}
+
+.dropdown-content.show {
+  display: block; /* Show dropdown when 'show' class is added */
 }

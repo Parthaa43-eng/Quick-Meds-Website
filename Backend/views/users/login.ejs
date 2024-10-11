@@ -1,21 +1,38 @@
-<% layout("layouts/loginboilerplate.ejs") %> 
- <link rel="stylesheet" href="/userStyles.css">
+<% layout("layouts/boilerplate.ejs") %>
 
+
+<title>Login</title>
+<link rel="stylesheet" href="css/styles.css"> <!-- Link to your existing CSS file -->
+</head>
 <body>
-    <div class="signup-container">
-        <form class="signup-form" action="/login" method="POST" class="need-validation">
-            <h2>Login </h2>
-            <div class="input-group">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+    <nav>
+   
+
+    <div class="container">
+        <h2 class="mt-5">Login</h2>
+        <form action="/login" method="POST">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" class="form-control" id="username" name="username" required>
             </div>
-           
-            <div class="input-group">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" class="form-control" id="password" name="password" required>
             </div>
-            <button type="submit" class="signup-btn">Sign Up</button>
+            <button type="submit" class="btn btn-primary">Login</button>
         </form>
+        
     </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Quick-Meds. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
 </body>
+
 

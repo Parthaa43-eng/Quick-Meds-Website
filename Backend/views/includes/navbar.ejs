@@ -1,90 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quick-Meds</title>
-  <!-- Bootstrap CSS -->
-  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicines Website</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
-
 <body>
-  <nav class="navbar navbar-expand-lg navbar-light sticky-top">
-    <div class="logo">
-      <a href="/home">Quick-Meds</a>
-    </div>
+    <nav class="navbar">
+        <div class="logo">Quick-Meds</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="/home">Home</a></li>
+            <li><a href="/shops">Shop</a></li>
+            <li><a href="/shops/new">Add shops</a></li>
+           
+        </ul>
 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-      
-      
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
-            aria-haspopup="true" aria-expanded="false">
-            Dropdown
-          </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="/home/new">Add Shop</a>
-            <a class="dropdown-item" href="/shops">show all Shops</a>
-          </div>
-         
-        </li>
-      </ul>
-
-      <div class="searchBar">
-        <input onkeyup="search()" class="form-control search-input" type="search" placeholder="Search" aria-label="Search">
-        <button class="btn btn-outline-success ml-2" type="submit">Search</button>
+        <div class="search-container">
+          <input type="text" placeholder="Search..." class="search-bar">
       </div>
 
-      <a href="/signup">
-        <button class="btn btn-outline-success ml-3" type="button">Login / Signup</button>
-      </a>
+           <ul  class="nav-links" id="navLinks">
+            <li><a href="/about">About</a></li>
+            <li><a href="/signup">Signup</a></li>
+           </ul>
+        
+       
+        
+    </nav>
 
-      <label class="switch">
-        <input type="checkbox" id="darkModeToggle">
-        <span class="slider round"></span>
-      </label>
-    </div>
-  </nav>
-
-  <!-- Include jQuery and Bootstrap JS (for Bootstrap 4) -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-  <script>
-    const darkModeToggle = document.getElementById('darkModeToggle');
-    const body = document.body;
-  
-    // Apply saved theme preference on page load
-    if (localStorage.getItem('theme') === 'dark') {
-      body.classList.add('dark-mode');
-      document.querySelector('.navbar').classList.add('dark-mode');
-      document.querySelector('.searchBar .form-control').classList.add('dark-mode');
-      darkModeToggle.checked = true;
-    }
-  
-    darkModeToggle.addEventListener('change', () => {
-      body.classList.toggle('dark-mode');
-      document.querySelector('.navbar').classList.toggle('dark-mode');
-      document.querySelector('.searchBar .form-control').classList.toggle('dark-mode');
-  
-      // Save user's preference in localStorage
-      localStorage.setItem('theme', body.classList.contains('dark-mode') ? 'dark' : 'light');
-    });
-
-   
-    
-  </script>
-  
+    <script src="scripts.js"></script>
 </body>
-
 </html>

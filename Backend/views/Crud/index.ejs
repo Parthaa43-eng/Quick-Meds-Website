@@ -50,7 +50,7 @@
             </div>
         </a>
 
-        <a href="/medicines">
+        <a href="/supplements">
             <div class="card">
                 <img class="img" src="img1.png" alt="Medicine Image">
                 <div class="card-content"> <!-- Added a container for flexbox -->
@@ -62,7 +62,7 @@
                 
             </div>
         </a>
-        <a href="/medicines">
+        <a href="/Baby">
             <div class="card">
                 <img class="img" src="img1.png" alt="Medicine Image">
                 <div class="card-content"> <!-- Added a container for flexbox -->
@@ -73,7 +73,7 @@
                 
             </div>
         </a>
-        <a href="/medicines">
+        <a href="/beauty">
             <div class="card">
                 <img class="img" src="img1.png" alt="Medicine Image">
                 <div class="card-content"> <!-- Added a container for flexbox -->
@@ -85,7 +85,7 @@
             </div>
         </a>
 
-        <a href="/medicines">
+        <a href="/wellness">
             <div class="card">
                 <img class="img" src="img1.png" alt="Medicine Image">
                 <div class="card-content"> <!-- Added a container for flexbox -->
@@ -200,5 +200,33 @@
     
     
 
-   
+   <script>
+    // JavaScript code for the footer functionality
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to toggle dropdown visibility
+    function toggleDropdown(dropdownId) {
+        const dropdown = document.getElementById(dropdownId);
+        dropdown.classList.toggle('show'); // Add or remove 'show' class to control visibility
+    }
+
+    // Assign toggle function to the dropdown headers
+    const serviceHeader = document.querySelector('.dropdown-header:nth-of-type(1)');
+    const accreditationHeader = document.querySelector('.dropdown-header:nth-of-type(2)');
+
+    serviceHeader.onclick = function() {
+        toggleDropdown('servicesDropdown');
+    };
+
+    accreditationHeader.onclick = function() {
+        toggleDropdown('accreditationsDropdown');
+    };
+
+    // Display the current year in the footer tagline
+    const yearSpan = document.createElement('span');
+    yearSpan.textContent = new Date().getFullYear(); // Get current year
+    const tagline = document.querySelector('.tagline a');
+    tagline.textContent += ` ${yearSpan.textContent}`;
+});
+
+   </script>
 </body>

@@ -10,6 +10,8 @@ const ownerSchema = new mongoose.Schema({
    
 });
 
+
 const owner  = mongoose.model("owner" , ownerSchema);
 module.exports = owner;
+
 

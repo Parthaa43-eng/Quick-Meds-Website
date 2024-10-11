@@ -3,35 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit Shop details--</title>
+    <title>Edit Shop Details</title> <!-- Fixed title -->
+    <link rel="stylesheet" href="/styles.css"> <!-- Link to the external CSS file -->
 </head>
 <body>
-    <h1>Edit Shop details--</h1>
+    <h1>Edit Shop Details</h1> <!-- Fixed header -->
 
-    <form  action="/home/<%= user._id %>?_method=PUT" method="POST">
-        <label for=" Shop_Name">Shop Name</label>
-        <input type="text" name="owner[Shop_Name]" id=" Shop_Name" placeholder="Enter shop name" >
-        <br><br>
+    <form action="/shops/<%= user._id %>?_method=PUT" method="POST"> <!-- Updated action to /shops -->
+        <label for="Shop_Name">Shop Name</label>
+        <input type="text" name="owner[Shop_Name]" id="Shop_Name" value="<%= user.Shop_Name %>" placeholder="Enter shop name" required> <!-- Added value and required -->
         
         <label for="description">Shop Description</label>
-        <textarea name="owner[description]" id="description" placeholder="Enter something about shop" ></textarea>
-        <br><br>
+        <textarea name="owner[description]" id="description" placeholder="Enter something about the shop" required><%= user.description %></textarea> <!-- Added value and required -->
 
         <label for="image">Shop Image</label>
-        <input type="text" name="owner[image]" id="image" value="<%= user.image %>" placeholder="Enter image URL">
-        <br><br>
+        <input type="text" name="owner[image]" id="image" value="<%= user.image %>" placeholder="Enter image URL" required> <!-- Added required -->
 
         <label for="location">Shop Location</label>
-        <input type="text" name="owner[location]" id="location" placeholder="Enter shop location" >
-        <br><br>
+        <input type="text" name="owner[location]" id="location" value="<%= user.location %>" placeholder="Enter shop location" required> <!-- Added value and required -->
 
         <label for="country">Country</label>
-        <input type="text" name="owner[country]" id="country" placeholder="Enter country" >
-        <br><br>
+        <input type="text" name="owner[country]" id="country" value="<%= user.country %>" placeholder="Enter country" required> <!-- Added value and required -->
 
-        <button type="submit">Edit  &#x2611;</button>
-        
-
+        <button type="submit">Edit &#x2611;</button>
     </form>
 </body>
 </html>
