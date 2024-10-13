@@ -26,7 +26,7 @@ const port = 8080;
 // Connect to MongoDB and initialize the database
 async function main() {
     await mongoose.connect(MongoDb_url);
-    console.log("Connection successful");
+   
     await initDb();
     await initMedsDb(); // Keeping medicine DB initialization
 }
@@ -36,9 +36,9 @@ const initDb = async () => {
     const count = await users.countDocuments();
     if (count === 0) {
         await users.insertMany(data.data);
-        console.log("User database initialized");
+       
     } else {
-        console.log("User database already has data. Initialization skipped.");
+        
     }
 };
 
@@ -47,10 +47,7 @@ const initMedsDb = async () => {
     const count = await meds.countDocuments();
     if (count === 0) {
         await meds.insertMany(medsData);
-        console.log("Medicines database initialized");
-    } else {
-        console.log("Medicines database already has data. Initialization skipped.");
-    }
+    } 
 };
 
 const app = express();
@@ -67,6 +64,13 @@ app.use(session(sessionOptions));
 app.use(flash());
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use((req,res,next) =>{
+    res.locals.success = req.flash("success");
+    res.locals.error = req.flash("error");
+    res.locals.currUser = req.user;
+    next();
+});
 
 // Routes for user authentication and management
 app.use("/", userRouter);
@@ -93,65 +97,17 @@ app.get("/home", async (req, res) => {
 
 
 // Route to display all shops (all users)
-app.get("/shops", async (req, res) => {
-    const allUsers = await users.find({});
-    res.render("Crud/shop.ejs", { allUsers });
-});
 
-app.get("/shops/new",isLoggedin ,  (req, res) => {
-        res.render("Crud/new.ejs");
-});
-// Add new shop
-app.post("/shops", async (req, res) => {
-    try {
-        const newOwner = new users(req.body.owner);
-        await newOwner.save();
-        res.redirect("/shops");
-    } catch (error) {
-        console.error("Error creating shop:", error);
-        res.status(500).send("Internal Server Error");
-    }
-});
+
+// Add new shop route
+
 
 /**
  * Route to display individual shop details
  */
-app.get("/shops/:id", async (req, res) => {
-    const { id } = req.params;
-    const user = await users.findById(id);
-    res.render("Crud/show.ejs", { user });
-});
-/**
- * Route to render edit form for shop
- */
-app.get("/shops/:id/edit",  async (req, res) => {
-    let { id } = req.params;
-    let user = await users.findById(id);
-    res.render("Crud/edit.ejs", { user });
-});
-
-/**
- * Route to update shop information
- */
-app.put("/shops/:id", async (req, res) => {
-    const { id } = req.params; // Corrected destructuring
-    await users.findByIdAndUpdate(id, { ...req.body.owner });
-    res.redirect("/shops");
-});
-
-/**
- * Route to delete a shop
- */
-app.delete("/shops/:id", async (req, res) => {
-    const { id } = req.params.id;
-    const deletedShop = await users.findByIdAndDelete(id);
-    if (deletedShop) {
-        req.session.deletedShop = deletedShop;
-    }
-    res.redirect("/shops");
-});
 
 
+//Create route
 
 // Route to display all medicines
 app.get("/medicines", async (req, res) => {
@@ -165,7 +121,7 @@ app.get("/medicines", async (req, res) => {
     }
 });
 
-app.get("/about" , (req,res)=>{
+app.get("/about" , isLoggedin , (req,res)=>{
     res.render("medicines/about.ejs");
 })
 

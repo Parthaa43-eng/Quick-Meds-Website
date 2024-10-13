@@ -11,8 +11,6 @@
         <div class="logo">Quick-Meds</div>
         <ul class="nav-links" id="navLinks">
             <li><a href="/home">Home</a></li>
-            <li><a href="/shops">Shop</a></li>
-            <li><a href="/shops/new">Add shops</a></li>
            
         </ul>
 
@@ -22,7 +20,15 @@
 
            <ul  class="nav-links" id="navLinks">
             <li><a href="/about">About</a></li>
-            <li><a href="/signup">Signup</a></li>
+            <% if(!currUser){ %>
+                <li><a href="/signup">Signup</a></li>
+                <li><a href="/login">Login</a></li>
+            <% } %>
+            
+            <% if(currUser){ %>
+                <li><a href="/logout">Logout</a></li>
+            <% } %>
+            
            </ul>
         
        

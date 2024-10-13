@@ -5,7 +5,11 @@ const passport = require("passport");
 
 // Signup Route (GET)
 router.get("/signup", (req, res) => {
-    res.render("users/signup.ejs");
+    res.render("users/identification.ejs");
+});
+
+router.get("/signup/doctor", (req, res) =>   {
+    res.render("users/doctorsSignup.ejs");
 });
 
 // Signup Route (POST)
@@ -41,6 +45,7 @@ router.post("/login", (req, res, next) => {
         
         // Log user information on successful login
         console.log("Login successful:"); // Print user details to console
+        console.log( "Current User : " ,    user.username);
         req.logIn(user, (err) => {
             if (err) {
                 console.error("Login error:", err);
@@ -50,6 +55,16 @@ router.post("/login", (req, res, next) => {
         });
     })(req, res, next);
 });
+
+router.get("/logout" , ( req,res ,next) =>{
+    req.logout( (err)=>{
+        if(err){
+            next(err);
+        }
+        console.log( " Logged Out!!");
+        res.redirect("/home");
+    })
+})
 
 // Export the router
 module.exports = router;

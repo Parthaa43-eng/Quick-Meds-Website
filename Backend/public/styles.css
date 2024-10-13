@@ -3,35 +3,33 @@
 body {
   background-color: #f7f8f9; /* Slightly off-white to keep it light and modern */
   font-family: "Segoe UI", Tahoma, sans-serif; /* Clean, professional, and easy-to-read font */
+  color: #333; /* Dark grey text for readability */
   margin: 0;
   padding: 0;
-  color: #333; /* Dark grey text for readability */
 }
 
-  /* Carousel styling */
-  .carousel-item img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover; /* Ensure image fits properly */
-  }
-  
-  /* Card grid layout */
-  .card-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-    margin: 20px;
-  }
-  
-  /* General body styling */
+/* -------------------------------------------------------------------- */
 
+/* Carousel styling */
+.carousel-item img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover; /* Ensure image fits properly */
+}
 
-/* Heading */
-/* General body styling */
+/* -------------------------------------------------------------------- */
 
+/* Card grid layout */
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+  margin: 20px;
+}
 
-/* Heading */
+/* -------------------------------------------------------------------- */
+
 /* Heading */
 h1 {
   color: #3b5998;
@@ -44,195 +42,155 @@ h1 {
   margin: 20px 0;
 }
 
-.spinner-border {
-  display: none; /* Initially hidden */
-  margin: 0 auto;
+/* -------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------- */
+
+
+/* -------------------------------------------------------------------- */
+
+/* -------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------- */
+
+/* Alert for shop deletion */
+
+/* -------------------------------------------------------------------- */
+
+/* Sliding images */
+.slidingImages {
+  background: linear-gradient(90deg, #1a2a6c, #b21f1f, #fdbb2d);
+  margin: 20px auto;
+  max-width: 1500px; /* Set a maximum width to prevent it from stretching too much */
+  border-radius: 15px; /* Smooth rounded corners */
+  overflow: hidden; /* Hide any overflow from rounding */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a soft shadow for depth */
 }
 
-.shop-container {
-  display: none; /* Initially hidden */
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive grid */
-  gap: 20px; /* Space between cards */
-  padding: 20px; /* Padding around the shop container */
+/* -------------------------------------------------------------------- */
+
+.carousel-inner {
+  border-radius: 15px; /* Make the inner content match the container */
 }
 
-.shop-card {
-  text-decoration: none; /* Remove underline from links */
+/* -------------------------------------------------------------------- */
+
+.carousel-item img {
+  height: 300px; /* Set a fixed height for images */
+  object-fit: cover; /* Ensure the images cover the area without stretching */
+  border-radius: 15px; /* Apply rounded corners to the images */
 }
 
+/* -------------------------------------------------------------------- */
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Darken the arrows */
+  border-radius: 50%; /* Make them circular */
+  padding: 10px; /* Add some padding to the arrows */
+  transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+.carousel-control-prev-icon:hover,
+.carousel-control-next-icon:hover {
+  background-color: rgba(0, 0, 0, 0.8); /* Darken further on hover */
+}
+
+/* -------------------------------------------------------------------- */
+
+.carousel-indicators button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; /* Make indicators circular */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+  transition: background-color 0.3s ease; /* Smooth transition for hover */
+}
+
+.carousel-indicators button:hover,
+.carousel-indicators .active {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker color on hover and active */
+}
+
+/* -------------------------------------------------------------------- */
+
+/* Add smooth transitions between slides */
+.carousel-item {
+  transition: transform 0.5s ease-in-out; /* Smooth slide transitions */
+}
+
+/* -------------------------------------------------------------------- */
+
+/* styles.css */
 .card {
-  background-color: #fff; /* White background for cards */
-  border: 1px solid #ccc; /* Light border for cards */
-  border-radius: 8px; /* Rounded corners */
-  overflow: hidden; /* Hide overflow */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-  transition: transform 0.3s ease; /* Animation on hover */
+  display: flex; /* Use Flexbox to arrange items horizontally */
+  align-items: center; /* Center items vertically */
+  margin-bottom: 15px; /* Add spacing between cards */
+  border: 2px solid #010406; /* Optional: Add a border for better visibility */
+  border-radius: 5px; /* Optional: Round the corners */
+  padding: 10px; /* Optional: Add padding around the card */
+  height: 270px;
+  width: 200px;
+  transition: transform 0.3s, box-shadow 0.3s; /* Add smooth transition for hover effects */
 }
 
 .card:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
+  transform: scale(1.05); /* Slightly increase the size of the card */
+  box-shadow: 0 10px 15px skyblue; /* Add depth with shadow */
 }
 
-.img {
-  width: 100%; /* Full width */
-  height: 150px; /* Fixed height for images */
-  object-fit: cover; /* Cover to maintain aspect ratio */
-}
+/* -------------------------------------------------------------------- */
 
 .card-content {
-  padding: 15px; /* Padding inside card */
-  text-align: center; /* Center text */
+  display: flex; /* Use Flexbox for vertical alignment */
+  flex-direction: column; /* Stack the heading and paragraph vertically */
+  margin-left: 10px; /* Space between image and text */
 }
 
-h4 {
-  margin: 10px 0; /* Space around heading */
-  color: #333; /* Dark text color */
-}
-
-.explore-btn {
-  background-color: #4CAF50; /* Green background for button */
-  color: white; /* White text for button */
-  border: none; /* Remove border */
-  padding: 10px 15px; /* Padding for button */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer cursor on hover */
-  transition: background 0.3s ease; /* Smooth background change */
-}
-
-.explore-btn:hover {
-  background-color: #45a049; /* Darker green on hover */
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .card {
-      flex-direction: column;
-      align-items: flex-start;
-  }
-}
-
-  
-  /* Alert for shop deletion */
-  .alert {
-    background-color: #f44336;
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
-    border-radius: 5px;
-    animation: fadeIn 0.5s ease-out; /* Smooth fade-in effect */
-  }
-  
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-  
-  /* Footer */
-  
-
-  
-  .slidingImages {
-    margin: 20px auto;
-    max-width: 1500px; /* Set a maximum width to prevent it from stretching too much */
-    border-radius: 15px; /* Smooth rounded corners */
-    overflow: hidden; /* Hide any overflow from rounding */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add a soft shadow for depth */
-  }
-  
-  .carousel-inner {
-    border-radius: 15px; /* Make the inner content match the container */
-  }
-  
-  .carousel-item img {
-    height: 300px; /* Set a fixed height for images */
-    object-fit: cover; /* Ensure the images cover the area without stretching */
-    border-radius: 15px; /* Apply rounded corners to the images */
-  }
-  
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    background-color: rgba(0, 0, 0, 0.5); /* Darken the arrows */
-    border-radius: 50%; /* Make them circular */
-    padding: 10px; /* Add some padding to the arrows */
-    transition: background-color 0.3s ease; /* Smooth hover transition */
-  }
-  
-  .carousel-control-prev-icon:hover,
-  .carousel-control-next-icon:hover {
-    background-color: rgba(0, 0, 0, 0.8); /* Darken further on hover */
-  }
-  
-  .carousel-indicators button {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%; /* Make indicators circular */
-    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
-  }
-  
-  .carousel-indicators button:hover,
-  .carousel-indicators .active {
-    background-color: rgba(0, 0, 0, 0.8); /* Darker color on hover and active */
-  }
-  
-  /* Add smooth transitions between slides */
-  .carousel-item {
-    transition: transform 0.5s ease-in-out; /* Smooth slide transitions */
-  }
-  
-  /* styles.css */
-  
-  .card {
-    display: flex;              /* Use Flexbox to arrange items horizontally */
-    align-items: center;        /* Center items vertically */
-    margin-bottom: 15px;        /* Add spacing between cards */
-    border: 2px solid #0e0707;  /* Optional: Add a border for better visibility */
-    border-radius: 5px;         /* Optional: Round the corners */
-    padding: 10px;              /* Optional: Add padding around the card */
-    height: 270px;
-    width: 200px;
-    transition: transform 0.3s, box-shadow 0.3s; /* Add smooth transition for hover effects */
-}
-
-.card:hover {
-    transform: scale(1.05);    /* Slightly increase the size of the card */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add a shadow effect */
-}
-
-.card-content {
-    display: flex;              /* Use Flexbox for vertical alignment */
-    flex-direction: column;     /* Stack the heading and paragraph vertically */
-    margin-left: 10px;          /* Space between image and text */
-}
+/* -------------------------------------------------------------------- */
 
 .card-content p {
-    margin-top: 10px;           /* Space between heading and paragraph */
-    color: #777;               /* Change text color */
-    font-size: 14px;           /* Adjust font size */
+  margin-top: 10px; /* Space between heading and paragraph */
+  color: #777; /* Change text color */
+  font-size: 14px; /* Adjust font size */
 }
+
+/* -------------------------------------------------------------------- */
 
 .img {
-    width: 150px;               /* Set a width for the image, adjust as needed */
-    height: 150px;              /* Maintain aspect ratio */
+  width: 150px; /* Set a width for the image, adjust as needed */
+  height: 150px; /* Maintain aspect ratio */
 }
+
+/* -------------------------------------------------------------------- */
 
 a {
-    color: black;
+  color: black;
+  text-decoration: none;
+
 }
 
-a:hover {
-    text-decoration: none;
-}
 
 /* Buy Options Section */
 .buyOptions {
-  background-color: #ff6f61; /* Bold coral color for high contrast and energy */
+  background-color: whitesmoke;
+  border: 2px solid rgb(4, 8, 10);
   padding: 10px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
   border-radius: 10px; /* Softer rounded corners for a modern look */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add depth with shadow */
+  box-shadow: 0 5px 15px rgb(0, 0, 0); /* Add depth with shadow */
 }
 
 .tagline {
@@ -242,23 +200,18 @@ a:hover {
 
 /* Footer (for consistency) */
 .footer {
-  background-color: #2b2d42; /* Dark greyish blue */
-  color: white;
+  background: conic-gradient(
+    from 90deg, 
+    #87CEEB, /* Light Sky Blue */
+    #4682B4, /* Steel Blue */
+    #00BFFF, /* Deep Sky Blue */
+    #87CEFA /* Light Sky Blue */
+  );  color: white;
   padding: 1.5rem 2rem;
   text-align: center;
 }
 
-.footer_img {
-    display: flex; /* Use flexbox for alignment */
-    justify-content: space-around; /* Distribute space evenly between images */
-    align-items: center; /* Align items vertically centered */
-    margin: 20px 0; /* Add margin to top and bottom for spacing */
-}
 
-.footer_img img {
-    height: 100px; /* Maintain aspect ratio */
-    width: 200px; /* Set a fixed width for uniformity */
-}
 .custom-hr {
     border: none; /* Remove default border */
     height: 2px; /* Increase thickness */
@@ -370,18 +323,31 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1.5rem 2rem;
-  color: white;
+  color: rgb(255, 253, 253);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
   position: sticky;
   top: 0;
+  width: 100%; /* Makes the navbar take the full width */
+  left: 0; 
   z-index: 10;
-  background: linear-gradient(90deg, #1a2a6c, #b21f1f, #fdbb2d);
-  transition: background 0.5s ease, transform 0.3s ease;
+  background: linear-gradient(
+    135deg, 
+    #14b3d3,  /* Very light cyan for a clean, fresh look */
+    #1ecbdb,  /* Soft, calm teal */
+    #16a4b7,  /* Deeper teal for some contrast */
+    #497F92 );
+    transition: background 0.5s ease, transform 0.3s ease;
 }
 
 .navbar:hover {
-  background: linear-gradient(90deg, #fdbb2d, #b21f1f, #1a2a6c); /* Reverse the gradient on hover */
-  transform: translateY(-2px); /* Lift effect on hover */
+  background: linear-gradient(
+    0deg, 
+    #0f9cb8,  /* A professional darkened cyan */
+    #1cb0c7,  /* A more pronounced teal */
+    #138a9e,  /* A darker teal for contrast */
+    #3b6575   /* A deep navy that maintains a professional tone */
+  );
+     transform: translateY(-2px); /* Lift effect on hover */
 }
 
 .nav-item {
@@ -389,12 +355,24 @@ body {
 }
 
 .logo {
-  font-size: 2.5rem; /* Increased font size */
+  font-size: 3rem; /* Increased font size for better visibility */
   font-weight: bold;
-  font-family: 'Pacifico', cursive; /* Stylish logo */
-  color: #fff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4); /* Subtle shadow for depth */
+  font-family: 'Pacifico', cursive; /* Stylish font */
+  background: linear-gradient(90deg, #87CEEB, #4682B4); /* Sky blue gradient background */
+  -webkit-background-clip: text; /* Clip background to text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Deeper shadow for depth */
+  padding: 10px; /* Add some padding */
+  border-radius: 5px; /* Rounded corners */
+  transition: transform 0.3s, text-shadow 0.3s; /* Smooth transition for hover effects */
 }
+
+.logo:hover {
+  transform: scale(1.1); /* Slightly enlarge the logo on hover */
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Enhanced shadow on hover */
+}
+
+
+
 
 /* Search container styling */
 .search-container {
@@ -457,7 +435,7 @@ body {
 }
 
 .nav-links a:hover {
-  color: #b3e0ff; /* Softer light blue on hover */
+  color: #000000; /* Softer light blue on hover */
   transform: translateY(-4px); /* Lift effect */
 }
 
@@ -557,8 +535,13 @@ h2 {
 }
 
 footer {
-  background-color: #f8f9fa; /* Light footer background */
-  padding: 20px;
+  background: conic-gradient(
+    from 90deg, 
+    #87CEEB, /* Light Sky Blue */
+    #4682B4, /* Steel Blue */
+    #00BFFF, /* Deep Sky Blue */
+    #87CEFA /* Light Sky Blue */
+  );  padding: 20px;
   text-align: center;
   margin-top: 20px;
 }
@@ -601,7 +584,13 @@ h2 {
 }
 
 footer {
-    background-color: #f8f9fa; /* Light footer background */
+  background: conic-gradient(
+    from 90deg, 
+    #87CEEB, /* Light Sky Blue */
+    #4682B4, /* Steel Blue */
+    #00BFFF, /* Deep Sky Blue */
+    #87CEFA /* Light Sky Blue */
+  ); 
     padding: 20px;
     text-align: center;
     margin-top: 20px;
@@ -703,4 +692,202 @@ footer {
 
 .dropdown-content.show {
   display: block; /* Show dropdown when 'show' class is added */
+}
+.image-slider {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+/* styles.css */
+
+/* General body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f7; /* Light background */
+  color: #333;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+h1 {
+  color: #4a90e2; /* Header color */
+  font-size: 2.5em; /* Header size */
+}
+
+/* Card container styles */
+.card-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: space-between; /* Space cards evenly */
+}
+
+/* Styles for the medicine list */
+ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex; /* Use flexbox for the list */
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: space-between; /* Space items evenly */
+}
+
+/* Medicine card styles */
+.med-card {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  align-items: center; /* Center items */
+  background-color: #ffffff; /* White card background */
+  border: 1px solid #ddd; /* Light gray border */
+  border-radius: 8px;
+  padding: 15px;
+  margin: 15px;
+  width: calc(33.333% - 30px); /* 3 cards in a row, accounting for margins */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Slight shadow */
+  transition: transform 0.2s, box-shadow 0.2s; /* Smooth transitions */
+}
+
+.med-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .med-card {
+      width: calc(50% - 30px); /* 2 cards in a row for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .med-card {
+      width: calc(100% - 30px); /* 1 card in a row for mobile devices */
+  }
+}
+
+/* Image styles */
+.med-image {
+  max-width: 100px;
+  max-height: 100px;
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Medicine info styles */
+.med-info {
+  text-align: center; /* Center text */
+}
+
+/* Counter container styles */
+/* Counter container styles */
+.counter-container {
+  display: flex; /* Use flexbox to align items */
+  align-items: center; /* Center items vertically */
+  margin: 10px 0; /* Space above and below counter */
+}
+
+/* Count button styles */
+.count-button {
+  margin-left: 10px; /* Space to the left of the count button */
+  padding: 5px 10px; /* Padding for buttons */
+  background-color: rgb(5, 5, 28); /* Primary button color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+}
+
+/* Item count styles */
+.item-count {
+  margin: 0 10px; /* Space around count */
+  font-size: 1.2em; /* Increase font size */
+}
+
+/* Add to Cart button styles */
+.add-to-cart {
+  padding: 10px 15px; /* Padding for button */
+  background-color: rgb(5, 5, 28); /* Button color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  font-size: 1em; /* Font size for button */
+  transition: background-color 0.3s; /* Transition effect */
+}
+
+.add-to-cart:hover {
+  background-color: rgb(2, 2, 15); /* Darker color on hover */
+}
+/* Image styles */
+
+.images{
+  display: flex;
+  justify-content: space-evenly;
+  width: 300px; /* Set the desired width */
+  height: 350px; /* Maintain aspect ratio */
+  margin: 10px; /* Add space around the image */
+  border-radius: 5px; /* Optional: Rounded corners */
+  transition: transform 0.3s; /* Optional: Transition effect */
+}
+.category {
+  background: conic-gradient(
+    from 90deg, 
+    #87CEEB, /* Light Sky Blue */
+    #4682B4, /* Steel Blue */
+    #00BFFF, /* Deep Sky Blue */
+    #87CEFA /* Light Sky Blue */
+  );  color: white; /* Optional: Set the text color for contrast */
+  padding: 10px; /* Optional: Add some padding for spacing */
+  text-align: center; /* Optional: Center the text */
+  border-radius: 5px; /* Optional: Rounded corners */
+}
+
+.category h1 {
+  color: white; /* Set the text color */
+  padding: 10px; /* Add padding for spacing */
+  text-align: center; /* Center the text */
+  border-radius: 5px; /* Rounded corners */
+  margin: 0; /* Remove default margin */
 }
