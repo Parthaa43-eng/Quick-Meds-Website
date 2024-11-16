@@ -90,24 +90,11 @@ app.get("/home", async (req, res) => {
     res.render("Crud/index.ejs", { allUsers });
 });
 
-/**
- * Route to render form for adding new user
- * Protected by login check
- */
+app.get("/doctorsDashboard" , (req,res)=>{
+    res.render("doctor/dashboard.ejs");
+})
 
 
-// Route to display all shops (all users)
-
-
-// Add new shop route
-
-
-/**
- * Route to display individual shop details
- */
-
-
-//Create route
 
 // Route to display all medicines
 app.get("/medicines", async (req, res) => {

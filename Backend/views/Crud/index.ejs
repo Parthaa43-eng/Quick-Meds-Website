@@ -1,238 +1,223 @@
-<% layout("layouts/boilerplate.ejs") %>
-<link rel="stylesheet" href="/styles.css">
-<body>
-    <main>
+    <% layout("layouts/boilerplate.ejs") %>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="css/navbar&footer.css">
+    <body>
+        <main>
 
-        <!-- Carousel Section -->
+            <!-- Carousel Section -->
 
-       <div class="slidingImages">
-        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <img src="https://mercury.akamaized.net/i/8305e44c24310e9f1ef9f0518bf18b00_234617_0.jpg" class="d-block w-100" alt="Quick-Meds Logo">
-              </div>
-              <div class="carousel-item">
-                <img src="https://mercury.akamaized.net/i/2891551b47ab409566be6538a973e51a_238688_0.jpg" class="d-block w-100" alt="Quick-Meds Logo">
-              </div>
-              <div class="carousel-item">
-                <img src="https://mercury.akamaized.net/i/8bf5cf6bad770296063924e5cc0d0a8e_264562_0.jpg" class="d-block w-100" alt="Image placeholder">
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </div>
-    <br>
-    <p class="tagline"><b>Quick-Meds:</b> Your Health, Our Priority—Delivered with Speed!</p>
-
-
-    <div class="buyOptions">
-        <a href="/medicines">
-            <div class="card">
-                <img class="img" src="images/medicines.webp" alt="Medicine Image">
-                <div class="card-content"> <!-- Added a container for flexbox -->
-                   
-                    <h4> Medicines </h4>
-                    <p>Save upto 25% off</p>
+        <div class="slidingImages">
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
-                
-            </div>
-        </a>
-
-        <a href="/supplements">
-            <div class="card">
-                <img class="img" src="images/supplements.webp" alt="Medicine Image">
-                <div class="card-content"> <!-- Added a container for flexbox -->
-                   
-                    <h4> Supplements </h4>
-                    
-                    <p>Save upto 25% off</p>
-                </div>
-                
-            </div>
-        </a>
-        <a href="/Baby">
-            <div class="card">
-                <img class="img" src="images/baby.webp" alt="Medicine Image">
-                <div class="card-content"> <!-- Added a container for flexbox -->
-                   
-                    <h4>Baby Products </h4>
-                    <p>Save upto 25% off</p>
-                </div>
-                
-            </div>
-        </a>
-        <a href="/beauty">
-            <div class="card">
-                <img class="img" src="images/beauty.webp" alt="Medicine Image">
-                <div class="card-content"> <!-- Added a container for flexbox -->
-                   
-                    <h4>Beauty Products </h4>
-                    <p>Save upto 25% off</p>
-                </div>
-                
-            </div>
-        </a>
-
-        <a href="/wellness">
-            <div class="card">
-                <img class="img" src="images/wellness.webp" alt="Medicine Image">
-                <div class="card-content"> <!-- Added a container for flexbox -->
-                   
-                    <h4>Wellness </h4>
-                    <p>Save upto 25% off</p>
-                </div>
-                
-            </div>
-        </a>
-
-        
-    </div>
-
-    <div class="slidingImages">
-        <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div> 
-            <div class="carousel-inner">
+                <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="images/image1.jpg" class="d-block w-100" alt="Quick-Meds Logo">
+                    <img src="https://mercury.akamaized.net/i/8305e44c24310e9f1ef9f0518bf18b00_234617_0.jpg" class="d-block w-100" alt="Quick-Meds Logo">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/image2.png" class="d-block w-100" alt="Quick-Meds Logo">
+                    <img src="https://mercury.akamaized.net/i/2891551b47ab409566be6538a973e51a_238688_0.jpg" class="d-block w-100" alt="Quick-Meds Logo">
                 </div>
                 <div class="carousel-item">
-                    <img src="images/image3.jpg" class="d-block w-100" alt="Image placeholder">
+                    <img src="https://mercury.akamaized.net/i/8bf5cf6bad770296063924e5cc0d0a8e_264562_0.jpg" class="d-block w-100" alt="Image placeholder">
                 </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-            </button>
+                </button>
+            </div>
         </div>
-    </div>
+        <br>
+        <p class="tagline"><b>Quick-Meds:</b> Your Health, Our Priority—Delivered with Speed!</p>
 
-    <div class="">
-        <h1>Shop By Category</h1>   
-    <div class="images">        
-        <img src="images/facewash.png" alt="">
-        <img src="images/painrelife.jpeg" alt="">
-        <img src="images/dressing.png" alt="">
-        <img src="images/body_care_4.jpeg" alt="">
-        <img src="images/hair_care.png" alt="">
-    </div>
-    </div>
-    
-    
 
-    </main>
+        <div class="buyOptions">
+            <a href="/medicines">
+                <div class="card">
+                    <img class="img" src="images/medicines.webp" alt="Medicine Image">
+                    <div class="card-content"> <!-- Added a container for flexbox -->
+                    
+                        <h4> Medicines </h4>
+                        <p>Save upto 25% off</p>
+                    </div>
+                    
+                </div>
+            </a>
 
-    <!-- Footer Section -->
-    <footer class="footer" style=" background: conic-gradient(
-        from 90deg, 
-        #87CEEB, /* Light Sky Blue */
-        #4682B4, /* Steel Blue */
-        #00BFFF, /* Deep Sky Blue */
-        #87CEFA /* Light Sky Blue */
-      ); color: #FFFFFF; padding: 20px; font-family: Arial, sans-serif;">
-        <h2 style="color: #FFFFFF;">Top Picks</h2>
-        
-        <h2 class="dropdown-header" style="cursor: pointer; color: #FFFFFF;" onclick="toggleDropdown('servicesDropdown')">Our Services &#x2192;</h2>
-        <div id="servicesDropdown" class="dropdown-content" style="background-color: #333333; padding: 10px;">
-            <h4 style="color: #FFFFFF;">Our Services</h4>
-            <p><strong style="color: #FFFFFF;">Quick-Meds: Your Health, Our Priority—Delivered with Speed!</strong></p>
-            <p style="color: #CCCCCC;">Netmeds, a Reliance Industries Limited group company, is India’s most preferred online healthcare portal...</p>
-            <ul style="color: #CCCCCC;">
-                <li><strong>Prescription medications:</strong> Netmeds.com provides instant access to over 1 lakh authentic prescription drugs...</li>
-                <li><strong>OTC and wellness & pet care products:</strong> Getting Over-The-Counter (OTC) products has become even simpler with Netmeds...</li>
-                <li><strong>Beauty and self-care:</strong> Self-care is as important as healthcare. Keeping this in mind, Netmeds is the only online healthcare portal...</li>
-                <!-- Additional services as necessary -->
-            </ul>
+            <a href="/supplements">
+                <div class="card">
+                    <img class="img" src="images/supplements.webp" alt="Medicine Image">
+                    <div class="card-content"> <!-- Added a container for flexbox -->
+                    
+                        <h4> Supplements </h4>
+                        
+                        <p>Save upto 25% off</p>
+                    </div>
+                    
+                </div>
+            </a>
+            <a href="/Baby">
+                <div class="card">
+                    <img class="img" src="images/baby.webp" alt="Medicine Image">
+                    <div class="card-content"> <!-- Added a container for flexbox -->
+                    
+                        <h4>Baby Products </h4>
+                        <p>Save upto 25% off</p>
+                    </div>
+                    
+                </div>
+            </a>
+            <a href="/beauty">
+                <div class="card">
+                    <img class="img" src="images/beauty.webp" alt="Medicine Image">
+                    <div class="card-content"> <!-- Added a container for flexbox -->
+                    
+                        <h4>Beauty Products </h4>
+                        <p>Save upto 25% off</p>
+                    </div>
+                    
+                </div>
+            </a>
+
+            <a href="/wellness">
+                <div class="card">
+                    <img class="img" src="images/wellness.webp" alt="Medicine Image">
+                    <div class="card-content"> <!-- Added a container for flexbox -->
+                    
+                        <h4>Wellness </h4>
+                        <p>Save upto 25% off</p>
+                    </div>
+                    
+                </div>
+            </a>
+
+            
         </div>
-    
-        <h3 class="dropdown-header" style="cursor: pointer; color: #FFFFFF;" onclick="toggleDropdown('accreditationsDropdown')">Accreditations &#x2192;</h3>
-        <div id="accreditationsDropdown" class="dropdown-content" style="background-color: #333333; padding: 10px;">
-            <p style="color: #FFFFFF;"><strong>Why choose Netmeds?</strong></p>
-            <ul style="color: #CCCCCC;">
-                <li>Vital medicines delivered across the country</li>
-                <li>Trust of more than 24 million registered users</li>
-                <!-- Additional accreditations as necessary -->
-            </ul>
+
+        <div class="slidingImages">
+            <div id="carouselExampleIndicators2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div> 
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/image1.jpg" class="d-block w-100" alt="Quick-Meds Logo">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/image2.png" class="d-block w-100" alt="Quick-Meds Logo">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/image3.jpg" class="d-block w-100" alt="Image placeholder">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators2" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+
+        <div class="">
+            <h1>Shop By Category</h1>   
+        <div class="images">        
+            <img src="images/facewash.png" alt="">
+            <img src="images/painrelife.jpeg" alt="">
+            <img src="images/dressing.png" alt="">
+            <img src="images/body_care_4.jpeg" alt="">
+            <img src="images/hair_care.png" alt="">
+        </div>
         </div>
         
-        <hr class="custom-hr" style="border-color: #FFFFFF;" />
         
-        <div class="footerLinks" style="background: linear-gradient(
-            135deg, 
-            #87CEEB, /* Light Sky Blue */
-            #4682B4  /* Steel Blue */
-        );
-        ">
-            <div class="footerColumn">
-                <h3 style="color: #f7f0f0;"><b>Social</b></h3>
-                <a href="https://www.instagram.com/parthaa_43/" target="_blank" style="color: white;"><p>Instagram</p></a>
-                <a href="https://www.facebook.com/" target="_blank" style="color: white;"><p>Facebook</p></a>
-                <a href="https://www.linkedin.com/feed/" target="_blank" style="color: white;"><p>LinkedIn</p></a>
+
+        </main>
+
+        <!-- Footer Section -->
+        <footer class="footer">
+            <h2>Top Picks</h2>
+            
+            <h2 class="dropdown-header" onclick="toggleDropdown('servicesDropdown')">Our Services &#x2192;</h2>
+            <div id="servicesDropdown" class="dropdown-content">
+                <h4>Our Services</h4>
+                <p><strong>Quick-Meds: Your Health, Our Priority—Delivered with Speed!</strong></p>
+                <p>Netmeds, a Reliance Industries Limited group company, is India’s most preferred online healthcare portal...</p>
+                <ul>
+                    <li><strong>Prescription medications:</strong> Netmeds.com provides instant access to over 1 lakh authentic prescription drugs...</li>
+                    <li><strong>OTC and wellness & pet care products:</strong> Getting Over-The-Counter (OTC) products has become even simpler...</li>
+                    <li><strong>Beauty and self-care:</strong> Self-care is as important as healthcare. Netmeds is the only online healthcare portal...</li>
+                </ul>
+            </div>
+        
+            <h3 class="dropdown-header" onclick="toggleDropdown('accreditationsDropdown')">Accreditations &#x2192;</h3>
+            <div id="accreditationsDropdown" class="dropdown-content">
+                <p><strong>Why choose Netmeds?</strong></p>
+                <ul>
+                    <li>Vital medicines delivered across the country</li>
+                    <li>Trust of more than 24 million registered users</li>
+                </ul>
             </div>
             
-            <div class="footerColumn">
-                <h3 style="color: #f7f0f0;"><b>Company</b></h3>
-                <a href="/about" target="_blank" style="color: white;"><p>About Us</p></a>
-                <a href="/contact" target="_blank" style="color: white;"><p>Contact Us</p></a>
-                <a href="/careers" target="_blank" style="color: white;"><p>Careers</p></a>
-                <a href="/blog" target="_blank" style="color: white;"><p>Blog</p></a>
-            </div>
+            <hr class="custom-hr" />
             
-            <div class="footerColumn">
-                <h3 style="color: #f7f0f0;"><b>Support</b></h3>
-                <a href="/faq" target="_blank" style="color: white;"><p>FAQ</p></a>
-                <a href="/help" target="_blank" style="color: white;"><p>Help Center</p></a>
-                <a href="/shipping-policy" target="_blank" style="color: white;"><p>Shipping Policy</p></a>
-                <a href="/returns" target="_blank" style="color: white;"><p>Returns</p></a>
+            <div class="footerLinks">
+                <div class="footerColumn">
+                    <h3><b>Social</b></h3>
+                    <a href="https://www.instagram.com/parthaa_43/" target="_blank"><p>Instagram</p></a>
+                    <a href="https://www.facebook.com/" target="_blank"><p>Facebook</p></a>
+                    <a href="https://www.linkedin.com/feed/" target="_blank"><p>LinkedIn</p></a>
+                </div>
+                
+                <div class="footerColumn">
+                    <h3><b>Company</b></h3>
+                    <a href="/about" target="_blank"><p>About Us</p></a>
+                    <a href="/contact" target="_blank"><p>Contact Us</p></a>
+                    <a href="/careers" target="_blank"><p>Careers</p></a>
+                    <a href="/blog" target="_blank"><p>Blog</p></a>
+                </div>
+                
+                <div class="footerColumn">
+                    <h3><b>Support</b></h3>
+                    <a href="/faq" target="_blank"><p>FAQ</p></a>
+                    <a href="/help" target="_blank"><p>Help Center</p></a>
+                    <a href="/shipping-policy" target="_blank"><p>Shipping Policy</p></a>
+                    <a href="/returns" target="_blank"><p>Returns</p></a>
+                </div>
+                
+                <div class="footerColumn">
+                    <h3><b>Legal</b></h3>
+                    <a href="/privacy-policy" target="_blank"><p>Privacy Policy</p></a>
+                    <a href="/terms-of-service" target="_blank"><p>Terms of Service</p></a>
+                    <a href="/disclaimer" target="_blank"><p>Disclaimer</p></a>
+                </div>
             </div>
-            
-            <div class="footerColumn">
-                <h3 style="color:  #f7f0f0;"><b>Legal</b></h3>
-                <a href="/privacy-policy" target="_blank" style="color: white;"><p>Privacy Policy</p></a>
-                <a href="/terms-of-service" target="_blank" style="color: white;"><p>Terms of Service</p></a>
-                <a href="/disclaimer" target="_blank" style="color: white;"><p>Disclaimer</p></a>
-            </div>
-            
+        </footer>
         
-           
+        <script src="js/script.js"></script> <!-- External JS for dropdown functionality -->            
+            <hr class="custom-hr" style="border-color: #FFFFFF;" />
+            <p class="tagline"><a href="/home" style="color: #050303;">@Quick-Meds private Lim. All rights reserved</a></p>
+        </footer>
         
-    </footer>
-    
         
-        <hr class="custom-hr" style="border-color: #FFFFFF;" />
-        <p class="tagline"><a href="/home" style="color: #050303;">@Quick-Meds private Lim. All rights reserved</a></p>
-    </footer>
-    
-    
-    
-    
-    <script>
-        function toggleDropdown(dropdownId) {
-            const dropdown = document.getElementById(dropdownId);
-            dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
-        }
-    </script>
-    
-</body>
+        
+        
+        <script>
+            function toggleDropdown(dropdownId) {
+                const dropdown = document.getElementById(dropdownId);
+                dropdown.style.display = (dropdown.style.display === 'block') ? 'none' : 'block';
+            }
+        </script>
+        
+    </body>

@@ -42,31 +42,6 @@ h1 {
   margin: 20px 0;
 }
 
-/* -------------------------------------------------------------------- */
-
-
-/* -------------------------------------------------------------------- */
-
-
-/* -------------------------------------------------------------------- */
-
-
-/* -------------------------------------------------------------------- */
-
-/* -------------------------------------------------------------------- */
-
-
-/* -------------------------------------------------------------------- */
-
-/* -------------------------------------------------------------------- */
-
-
-
-/* -------------------------------------------------------------------- */
-
-/* Alert for shop deletion */
-
-/* -------------------------------------------------------------------- */
 
 /* Sliding images */
 .slidingImages {
@@ -198,52 +173,10 @@ a {
     margin: 0 auto;      /* Optional: Center the element itself if it has a defined width */
 }
 
-/* Footer (for consistency) */
-.footer {
-  background: conic-gradient(
-    from 90deg, 
-    #87CEEB, /* Light Sky Blue */
-    #4682B4, /* Steel Blue */
-    #00BFFF, /* Deep Sky Blue */
-    #87CEFA /* Light Sky Blue */
-  );  color: white;
-  padding: 1.5rem 2rem;
-  text-align: center;
-}
 
 
-.custom-hr {
-    border: none; /* Remove default border */
-    height: 2px; /* Increase thickness */
-    background-color: black; /* Change color */
-    margin: 20px 0; /* Space above and below */
-}
-.footerLinks {
-    display: flex; /* Use flexbox */
-    justify-content: space-between; /* Space between columns */
-    padding: 20px;
-    background-color: #f8f9fa; /* Light background color */
-    color: #333; /* Text color */
-}
 
-.footerColumn {
-    flex: 1; /* Each column takes equal space */
-    margin: 0 10px; /* Margin between columns */
-}
 
-.footerColumn h3 {
-    font-size: 18px; /* Adjust header size */
-    margin-bottom: 10px; /* Space below header */
-}
-
-.footerColumn a {
-    color: #007bff; /* Link color */
-    text-decoration: none; /* Remove underline */
-}
-
-.footerColumn a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
 
 
 
@@ -307,166 +240,7 @@ a {
     }
   }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Poppins', sans-serif;
-  background: #f3f4f7; /* Soft background for contrast */
-}
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.5rem 2rem;
-  color: rgb(255, 253, 253);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
-  position: sticky;
-  top: 0;
-  width: 100%; /* Makes the navbar take the full width */
-  left: 0; 
-  z-index: 10;
-  background: linear-gradient(
-    135deg, 
-    #14b3d3,  /* Very light cyan for a clean, fresh look */
-    #1ecbdb,  /* Soft, calm teal */
-    #16a4b7,  /* Deeper teal for some contrast */
-    #497F92 );
-    transition: background 0.5s ease, transform 0.3s ease;
-}
-
-.navbar:hover {
-  background: linear-gradient(
-    0deg, 
-    #0f9cb8,  /* A professional darkened cyan */
-    #1cb0c7,  /* A more pronounced teal */
-    #138a9e,  /* A darker teal for contrast */
-    #3b6575   /* A deep navy that maintains a professional tone */
-  );
-     transform: translateY(-2px); /* Lift effect on hover */
-}
-
-.nav-item {
-  margin: 0 1rem; /* Space between nav items */
-}
-
-.logo {
-  font-size: 3rem; /* Increased font size for better visibility */
-  font-weight: bold;
-  font-family: 'Pacifico', cursive; /* Stylish font */
-  background: linear-gradient(90deg, #87CEEB, #4682B4); /* Sky blue gradient background */
-  -webkit-background-clip: text; /* Clip background to text */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Deeper shadow for depth */
-  padding: 10px; /* Add some padding */
-  border-radius: 5px; /* Rounded corners */
-  transition: transform 0.3s, text-shadow 0.3s; /* Smooth transition for hover effects */
-}
-
-.logo:hover {
-  transform: scale(1.1); /* Slightly enlarge the logo on hover */
-  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8); /* Enhanced shadow on hover */
-}
-
-
-
-
-/* Search container styling */
-.search-container {
-  display: flex;
-  justify-content: center; /* Center search bar */
-  align-items: center;
-  flex-grow: 1; /* Allow it to grow */
-  padding: 10px;
-}
-
-.search-bar {
-  width: 400px; /* Adjusted width */
-  padding: 0.5rem;
-  border: none;
-  border-radius: 20px; /* More rounded corners */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  transition: width 0.55s ease, box-shadow 0.4s ease; /* Smooth transition for width and shadow */
-}
-
-
-.search-bar:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(0, 122, 204, 0.5); /* Focus effect */
-  border-radius: 30px; /* Increase rounding on focus */
-}
-
-/* Nav links */
-.nav-links {
-  display: flex;
-  list-style: none;
-  margin-left: auto; /* Align nav links to the right */
-}
-
-.nav-links li {
-  margin-left: 2rem;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-size: 1.1rem;
-  letter-spacing: 0.8px;
-  font-weight: 500;
-  transition: color 0.4s ease, transform 0.4s ease;
-  position: relative;
-  padding-bottom: 0.2rem;
-}
-
-.nav-links a::after {
-  content: '';
-  display: block;
-  height: 2px;
-  width: 0%;
-  background: #b3e0ff; /* Light blue underline */
-  transition: width 0.4s ease;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.nav-links a:hover {
-  color: #000000; /* Softer light blue on hover */
-  transform: translateY(-4px); /* Lift effect */
-}
-
-.nav-links a:hover::after {
-  width: 100%; /* Underline expands on hover */
-}
-
-/* Mobile styling */
-@media screen and (max-width: 768px) {
-  .nav-links {
-      position: absolute;
-      right: 0;
-      top: 60px;
-      height: 100vh;
-      width: 100%;
-      background-color: #005f99; /* Darker blue for mobile menu */
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      display: none;
-  }
-
-  .nav-links.show {
-      display: flex;
-  }
-
-  .nav-links li {
-      margin: 1.5rem 0;
-  }
-
-  .hamburger {
+.hamburger {
       display: flex;
       flex-direction: column;
       cursor: pointer; /* Hand cursor on hover */
@@ -491,7 +265,7 @@ body {
   .hamburger.active .bar:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg); /* Bottom bar rotates */
   }
-}
+
 
 .about-container {
   padding: 20px;
@@ -534,27 +308,8 @@ h2 {
   color: #333;
 }
 
-footer {
-  background: conic-gradient(
-    from 90deg, 
-    #87CEEB, /* Light Sky Blue */
-    #4682B4, /* Steel Blue */
-    #00BFFF, /* Deep Sky Blue */
-    #87CEFA /* Light Sky Blue */
-  );  padding: 20px;
-  text-align: center;
-  margin-top: 20px;
-}
 
-.footer-links a {
-  margin: 0 10px;
-  color: #007bff;
-  text-decoration: none;
-}
 
-.footer-links a:hover {
-  text-decoration: underline;
-}
 .container {
     max-width: 500px; /* Center the form */
     margin: 50px auto; /* Center the container vertically */
@@ -583,28 +338,7 @@ h2 {
     background-color: #2980b9; /* Darker shade on hover */
 }
 
-footer {
-  background: conic-gradient(
-    from 90deg, 
-    #87CEEB, /* Light Sky Blue */
-    #4682B4, /* Steel Blue */
-    #00BFFF, /* Deep Sky Blue */
-    #87CEFA /* Light Sky Blue */
-  ); 
-    padding: 20px;
-    text-align: center;
-    margin-top: 20px;
-}
 
-.footer-links a {
-    margin: 0 10px;
-    color: #007bff; /* Footer link color */
-    text-decoration: none;
-}
-
-.footer-links a:hover {
-    text-decoration: underline; /* Underline on hover */
-}
 /* General container styling */
 .container {
   max-width: 600px; /* Maximum width for the form container */
@@ -656,27 +390,7 @@ h2 {
   background-color: #363742; /* Darker blue on hover */
 }
 
-/* Footer styling */
-footer {
-  background-color: #2b2d42; /* Dark greyish blue */
-  color: white; /* White text */
-  padding: 1.5rem 0; /* Padding for footer */
-  text-align: center; /* Center text */
-}
 
-.footer-content {
-  margin-bottom: 10px; /* Space below footer content */
-}
-
-.footer-links a {
-  color: white; /* White links */
-  margin: 0 10px; /* Space between links */
-  text-decoration: none; /* Remove underline */
-}
-
-.footer-links a:hover {
-  text-decoration: underline; /* Underline on hover */
-}
 
 /* Responsive adjustments */
 @media (max-width: 600px) {
@@ -890,4 +604,11 @@ ul {
   text-align: center; /* Center the text */
   border-radius: 5px; /* Rounded corners */
   margin: 0; /* Remove default margin */
+}
+
+  /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }

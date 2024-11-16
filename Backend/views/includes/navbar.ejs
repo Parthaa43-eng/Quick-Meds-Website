@@ -4,35 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medicines Website</title>
-    <link rel="stylesheet" href="/styles.css">
+    <link rel="stylesheet" href="css/navbar&footer.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="logo">Quick-Meds</div>
         <ul class="nav-links" id="navLinks">
             <li><a href="/home">Home</a></li>
-           
         </ul>
 
         <div class="search-container">
-          <input type="text" placeholder="Search..." class="search-bar">
-      </div>
+            <input type="text" placeholder="Search..." class="search-bar">
+        </div>
 
-           <ul  class="nav-links" id="navLinks">
+        <ul class="nav-links" id="navLinks">
             <li><a href="/about">About</a></li>
             <% if(!currUser){ %>
                 <li><a href="/signup">Signup</a></li>
                 <li><a href="/login">Login</a></li>
             <% } %>
-            
             <% if(currUser){ %>
                 <li><a href="/logout">Logout</a></li>
             <% } %>
-            
-           </ul>
-        
-       
-        
+        </ul>
     </nav>
 
     <script src="scripts.js"></script>
