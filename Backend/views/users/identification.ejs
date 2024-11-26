@@ -4,72 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <% layout("layouts/boilerplate.ejs") %>
-
     <title>Create Account</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f7fa; /* Light background for a fresh look */
-        }
-
-        .container {
-            background-color: #ffffff; /* White background for the form */
-            padding: 40px 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            width: 350px;
-        }
-
-        h2 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 24px;
-            font-weight: 600;
-        }
-
-        .account-option {
-            display: block; /* Stack links vertically */
-            margin: 15px 0;
-            padding: 12px 0;
-            text-decoration: none;
-            color: #fff;
-            background-color: #007bff;
-            border-radius: 5px;
-            font-size: 16px;
-            transition: background-color 0.3s, transform 0.2s;
-        }
-
-        .account-option:hover {
-            background-color: #0056b3;
-            transform: translateY(-2px);
-        }
-
-        .footer {
-            margin-top: 20px;
-            font-size: 14px;
-            background-color: #0056b3; ;
-        }
-
-        .footer a {
-            color: #05080a;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
     <div class="container">
         <h2>Create Account As</h2>
         <a class="account-option" href="/signup/doctor">Doctor</a>
         <a class="account-option" href="/signup/user">User</a>
-        <a class="account-option" href="">Already have an account? Login</a>
-        
+        <a  href="/login">Already have an account? Login</a>
     </div>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Quick-Meds. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

@@ -1,95 +1,140 @@
 /* General Navbar Styling */
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid rgb(0, 0, 0);
-    padding: 15px 30px;
-    background-color: #ffffff; /* White background */
-    border-bottom: 1px solid #e0e0e0; /* Subtle border for separation */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.05); /* Minimal shadow for depth */
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #ffffff; /* Clean white background */
+  border-bottom: 1px solid #e0e0e0; /* Subtle border for separation */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for depth */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Navbar Hover Effect */
+.navbar:hover {
+  background-color: #f8f8f8; /* Light background change on hover */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1); /* Slight increase in shadow */
+}
+
+/* Logo Styling */
+.logo {
+  font-size: 1.7rem;
+  font-weight: 700; /* Stronger bold for logo */
+  color: #2c3e50; /* Rich dark blue-gray */
+  text-transform: uppercase;
+  letter-spacing: 1px; /* Increased letter spacing */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.logo:hover {
+  color: #3498db; /* Subtle color change on hover */
+}
+
+/* Navigation Links Styling */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #34495e; /* Darker text for readability */
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 8px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #f2f2f2; /* Light background color on hover */
+  color: #3498db; /* Blue color on hover for a more modern look */
+}
+
+/* Search Bar Styling */
+.search-container {
+  flex-grow: 1;
+  max-width: 400px;
+  margin: 0 25px;
+  position: relative;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 25px; /* Rounded corners */
+  font-size: 1rem;
+  outline: none;
+  background-color: #f9f9f9; /* Subtle background color */
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #3498db; /* Focus border color */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
+  background-color: #ffffff; /* Change background color on focus */
+}
+
+/* Cart Icon Styling */
+.cart-container {
+  display: flex;
+  align-items: center;
+}
+
+.cart-container a {
+  color: #34495e;
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.cart-container .fa-shopping-cart {
+  font-size: 1.6rem;
+  margin-right: 10px;
+  transition: color 0.3s ease;
+}
+
+.cart-container a:hover .fa-shopping-cart {
+  color: #3498db; /* Change color on hover */
+}
+
+/* Cart Count Styling */
+#cart-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: #e74c3c;
+  color: white;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 50%;
+  padding: 4px 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+      flex-wrap: wrap;
+      padding: 15px;
   }
-  
-  /* Logo Styling */
-  .logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333333; /* Dark gray for text */
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    cursor: pointer;
-  }
-  
-  .logo:hover {
-    color: #555555; /* Slight hover effect */
-  }
-  
-  /* Navigation Links Styling */
-  .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #333333; /* Dark gray for links */
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-  }
-  
-  .nav-links a:hover {
-    background-color: #f0f0f0; /* Subtle hover background */
-    color: #000; /* Slightly darker text on hover */
-  }
-  
-  /* Search Bar Styling */
+
   .search-container {
-    flex-grow: 1;
-    max-width: 400px;
-    margin: 0 20px;
-    position: relative;
+      width: 100%;
+      margin: 10px 0;
   }
-  
-  .search-bar {
-    width: 100%;
-    padding: 10px 15px;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    font-size: 1rem;
-    outline: none;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+
+  .nav-links {
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
   }
-  
-  .search-bar:focus {
-    border-color: #170b0b; /* Slightly darker border on focus */
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .navbar {
-        flex-wrap: wrap;
-        padding: 15px;
-    }
-  
-    .search-container {
-        width: 100%;
-        margin: 10px 0;
-    }
-  
-    .nav-links {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-    }
-  }
+}
+
 /* Footer Styles */
 .footer {
   display: flex;

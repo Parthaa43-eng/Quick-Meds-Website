@@ -1,61 +1,65 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>All Medicines</title>
-    <% layout("layouts/boilerplate.ejs") %>
+<% layout("layouts/boilerplate.ejs") %>
 
-    <link rel="stylesheet" href="/styles.css"> <!-- Add your CSS file -->
-</head>
-<body>
-    <header>
-        <h1>All Medicines</h1>
-    </header>
-    <div class="card-container">
-        <ul>
-            <% for (let meds of allMeds) { %>
-                <li class="med-card">
-                    
-                    <div class="med-info">
-                        <a href="#" class="med-name">
-                            <strong><%= meds.Drug %></strong>
-                        </a>
+<h2 class="section-title">Explore Our Medicines</h2>
+<div class="card-container">
+    <link rel="stylesheet" href="/styles.css">
+
+    <div class="med-card-grid">
+        <% for (let meds of allMeds) { %>
+            <div class="med-card">
+                <div class="med-image-container">
+                    <img src="<%= meds.image %>" alt="<%= meds.Drug %>" class="med-image">
+                </div>
+                <div class="med-info">
+                    <a href="#" class="med-name"><strong><%= meds.Drug %></strong></a>
+                    <h4 class="med-price">Price: ₹<%= meds.MRP %></h4>
+                    <% if(currUser){ %>
                         <div class="counter-container">
                             <button class="count-button" onclick="decrement('<%= meds.Drug %>')">-</button>
                             <span class="item-count" id="count-<%= meds.Drug %>">0</span>
                             <button class="count-button" onclick="increment('<%= meds.Drug %>')">+</button>
                         </div>
                         <button class="add-to-cart" onclick="addToCart('<%= meds.Drug %>')">Add to Cart</button>
-                    </div>
-                </li>
-            <% } %>
-        </ul>
+
+                    <% } %>
+                    
+                </div>
+            </div>
+        <% } %>
     </div>
-    <script>
-        function increment(medName) {
-            const countElement = document.getElementById(`count-${medName}`);
-            countElement.textContent = parseInt(countElement.textContent) + 1;
-        }
+</div>
 
-        function decrement(medName) {
-            const countElement = document.getElementById(`count-${medName}`);
-            const currentCount = parseInt(countElement.textContent);
-            if (currentCount > 0) {
-                countElement.textContent = currentCount - 1;
-            }
-        }
 
-        function addToCart(medName) {
-            const countElement = document.getElementById(`count-${medName}`);
-            const count = parseInt(countElement.textContent);
-            if (count > 0) {
-                alert(`${count} ${medName}(s) added to cart!`);
-                countElement.textContent = 0; // Reset count after adding to cart
-            } else {
-                alert('Please select at least one item to add to cart.');
-            }
-        }
-    </script>
-</body>
-</html>
+<script> 
+    // Assuming you have a way to store the cart data
+let cart = {};
+
+function increment(medName) {
+    if (!cart[medName]) {
+        cart[medName] = 0;
+    }
+    cart[medName]++;
+    updateCounter(medName);
+}
+
+function decrement(medName) {
+    if (cart[medName] && cart[medName] > 0) {
+        cart[medName]--;
+        updateCounter(medName);
+    }
+}
+
+function updateCounter(medName) {
+    const counterElement = document.getElementById(`count-${medName}`);
+    if (counterElement) {
+        counterElement.textContent = cart[medName] || 0;
+    }
+}
+
+function addToCart(medName) {
+    // Add the item to cart logic here
+    console.log(`${medName} added to cart`);
+}
+
+</script>
+

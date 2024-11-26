@@ -48,7 +48,7 @@ const owners = [
         location: "Ahmedabad",
         country: "India"
     },
-    {
+    { 
         Shop_Name: "Kailash Medicals",
         description: "Committed to your health and wellbeing.",
         image: "https://example.com/images/kailash_medicals.jpg",

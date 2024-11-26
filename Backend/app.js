@@ -11,7 +11,13 @@ const passport = require("passport");
 const localStrategy = require("passport-local");
 const User = require('./Models/user.js'); // User for passport auth
 const userRouter = require("./routes/user.js"); // User routes
+const Appointment = require('./Models/appointments'); // Assuming you have an Appointment model
+const doctorDashboardRouter = require("./routes/doctorDashboard.js"); // Doctor Dashboard routes
+
+
 const { isLoggedin } = require("./middleware.js");
+
+
 // Session configuration options
 const sessionOptions = {
     secret: 'your_secret_key', // Replace with your secret
@@ -46,8 +52,18 @@ const initDb = async () => {
 const initMedsDb = async () => {
     const count = await meds.countDocuments();
     if (count === 0) {
+        // Ensure all medsData have an image field
+        medsData.forEach(med => {
+            if (!med.image) {
+                med.image = 'https://images.unsplash.com/photo-1592323818181-f9b967ff537c?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; // Default image path
+            }
+        });
+        
         await meds.insertMany(medsData);
-    } 
+        console.log("Database initialized with default medicines.");
+    } else {
+        console.log("Database already initialized.");
+    }
 };
 
 const app = express();
@@ -101,16 +117,39 @@ app.get("/medicines", async (req, res) => {
     try {
         // Filter for medicines only
         let allMeds =  await meds.find({});
+        console.log(allMeds);
+
         res.render("medicines/index.ejs", { allMeds });
     } catch (err) {
         console.error("Error fetching medicines:", err);
         res.status(500).send("Internal Server Error");
     }
 });
-
+app.get("/supplements", async (req, res) => {
+    try {
+        // Filter for medicines only
+        let allMeds =  await meds.find({});
+        res.render("medicines/index.ejs", { allMeds });
+    } catch (err) {
+        console.error("Error fetching medicines:", err);
+        res.status(500).send("Internal Server Error");
+    }
+});
+app.get("/baby", async (req, res) => {
+    try {
+        // Filter for medicines only
+        let allMeds =  await meds.find({});
+        res.render("medicines/index.ejs", { allMeds });
+    } catch (err) {
+        console.error("Error fetching medicines:", err);
+        res.status(500).send("Internal Server Error");
+    }
+});
 app.get("/about" , isLoggedin , (req,res)=>{
     res.render("medicines/about.ejs");
 })
+
+
 
 
 // Start the server

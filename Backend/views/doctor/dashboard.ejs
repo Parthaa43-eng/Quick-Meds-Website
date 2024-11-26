@@ -4,83 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor's Dashboard</title>
-    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="/css/dashboard.css">
 </head>
 <body>
-    <!-- Navbar -->
     <div class="navbar">
         <div class="logo">Quick-Meds</div>
         <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
         <div class="navbar-links">
-            <a href="#">Dashboard</a>
-            <a href="#">Appointments</a>
-            <a href="#">Patients</a>
-            <a href="#">Reports</a>
-            <a href="#">Settings</a>
-            <a href="#">Logout</a>
+            <a href="/appointments">Appointments</a>
         </div>
     </div>
 
-    <!-- Sidebar -->
     <div class="sidebar" id="sidebar">
         <div class="sidebar-links">
-            <a href="#">Dashboard</a>
-            <a href="#">Appointments</a>
-            <a href="#">Patients</a>
-            <a href="#">Reports</a>
-            <a href="#">Settings</a>
+            <a href="/doctorsDashboard">Dashboard</a>
+            <a href="/appointments">Appointments</a>
+            <a href="/patients">Patients</a>
+            <a href="/reports">Reports</a>
+            <a href="/settings">Settings</a>
         </div>
     </div>
 
-    <!-- Main Content -->
     <div class="main-content">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Welcome, Dr. Smith!</h1>
+            <p>Your personalized dashboard to manage appointments, patients, and reports efficiently.</p>
+        </div>
+
+        <!-- Overview Section -->
         <div class="card-container">
             <div class="card">
                 <h3>Total Appointments</h3>
-                <p>45</p>
+                <p>152</p>
             </div>
             <div class="card">
                 <h3>Total Patients</h3>
-                <p>120</p>
+                <p>1200</p>
             </div>
             <div class="card">
                 <h3>Today's Appointments</h3>
-                <p>8</p>
+                <p>18</p>
+            </div>
+            <div class="card">
+                <h3>Reports Generated</h3>
+                <p>25</p>
             </div>
         </div>
 
-        <div class="stats">
-            <h2>Recent Activity</h2>
+        <!-- Appointment Section -->
+        <section class="appointments">
+            <h2>Upcoming Appointments</h2>
             <table>
                 <thead>
                     <tr>
-                        <th>Date</th>
-                        <th>Patient</th>
+                        <th>Patient Name</th>
+                        <th>Time</th>
+                        <th>Reason</th>
                         <th>Status</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>12/11/2024</td>
                         <td>John Doe</td>
-                        <td>Completed</td>
+                        <td>10:30 AM</td>
+                        <td>Checkup</td>
+                        <td>Confirmed</td>
                     </tr>
                     <tr>
-                        <td>12/11/2024</td>
                         <td>Jane Smith</td>
+                        <td>11:15 AM</td>
+                        <td>Consultation</td>
                         <td>Pending</td>
                     </tr>
-                    <!-- Add more rows as needed -->
+                    <tr>
+                        <td>Mark Wilson</td>
+                        <td>12:00 PM</td>
+                        <td>Follow-up</td>
+                        <td>Confirmed</td>
+                    </tr>
                 </tbody>
             </table>
+        </section>
+
+        <!-- Notifications Section -->
+        <section class="notifications">
+            <h2>Notifications</h2>
+            <ul>
+                <li>New patient, Alex Johnson, has booked an appointment for tomorrow.</li>
+                <li>Report for patient Mary Taylor is ready to download.</li>
+                <li>Reminder: Monthly meeting scheduled for Friday at 2 PM.</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2024 Quick-Meds. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
         </div>
-    </div>
+    </footer>
 
-    <!-- Footer -->
-    <div class="footer">
-        <p>&copy; 2024 Quick-Meds. All Rights Reserved.</p>
-    </div>
-
-    <script src="script.js"></script>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
