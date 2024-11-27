@@ -5,13 +5,42 @@
   align-items: center;
   padding: 15px 30px;
   background-color: #ffffff; /* Clean white background */
-  border-bottom: 1px solid #e0e0e0; /* Subtle border for separation */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Slightly stronger shadow for depth */
+  border-bottom: 1.5px solid #181616; /* Subtle border for separation */
+  box-shadow: 0px 4px 8px rgba(226, 14, 14, 0.1); /* Slightly stronger shadow for depth */
   position: sticky;
   top: 0;
   z-index: 1000;
   transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
+
+/* Address Component Styling */
+.navbar .address {
+  display: flex; /* Flexbox for better alignment */
+  justify-content: center; /* Center the text */
+  align-items: center; /* Vertically center the content */
+  color: #333; /* Dark gray text for contrast */
+  font-family: 'Poppins', sans-serif; /* Clean and modern font */
+  font-size: 1rem; /* Balanced text size */
+  font-weight: 600; /* Slightly bold for emphasis */
+  cursor: pointer; /* Pointer cursor for interactivity */
+  transition: all 0.3s ease; /* Smooth animation on hover */
+  text-decoration: none; /* Remove underline */
+}
+
+/* Enhanced Hover Effect */
+.navbar .address:hover {
+  transform: scale(1.05); /* Slight zoom effect */
+  transition: transform 0.2s ease-in-out,  ease-in-out; /* Smooth transition */
+}
+
+
+/* Text Styling for h3 */
+.navbar .address h3 {
+  margin: 0; /* No extra spacing */
+  letter-spacing: 1px; /* Slightly spaced-out text */
+  text-transform: uppercase; /* Bold uppercase style */
+}
+
 
 /* Navbar Hover Effect */
 .navbar:hover {
@@ -76,6 +105,7 @@
 }
 
 .search-bar:focus {
+  border-radius: 50px; /* Rounded corners */
   border-color: #3498db; /* Focus border color */
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.15);
   background-color: #ffffff; /* Change background color on focus */

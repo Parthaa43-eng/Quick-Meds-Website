@@ -6,6 +6,7 @@ const flash = require("connect-flash"); // Assuming connect-flash is used
 
 
 
+
 // Signup Route (GET)
 router.get("/signup", (req, res) => {
     res.render("users/identification.ejs");
@@ -134,8 +135,6 @@ router.get("/logout", (req, res, next) => {
     });
 });
 
-// Route to add a new patient
-;
 
 
 // Export the router

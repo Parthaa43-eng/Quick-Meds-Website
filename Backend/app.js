@@ -11,8 +11,8 @@ const passport = require("passport");
 const localStrategy = require("passport-local");
 const User = require('./Models/user.js'); // User for passport auth
 const userRouter = require("./routes/user.js"); // User routes
-const Appointment = require('./Models/appointments'); // Assuming you have an Appointment model
-const doctorDashboardRouter = require("./routes/doctorDashboard.js"); // Doctor Dashboard routes
+const addressRoutes = require("./routes/addressRoutes");
+
 
 
 const { isLoggedin } = require("./middleware.js");
@@ -74,6 +74,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride("_method"));
 app.engine("ejs", ejsMate);
+
  
 // Middleware setup
 app.use(session(sessionOptions));
@@ -90,7 +91,7 @@ app.use((req,res,next) =>{
 
 // Routes for user authentication and management
 app.use("/", userRouter);
-
+app.use("/addresses", addressRoutes);
 /**
  * Passport configuration for user authentication
  */
@@ -145,10 +146,9 @@ app.get("/baby", async (req, res) => {
         res.status(500).send("Internal Server Error");
     }
 });
-app.get("/about" , isLoggedin , (req,res)=>{
+app.get("/about" ,(req,res)=>{
     res.render("medicines/about.ejs");
 })
-
 
 
 
